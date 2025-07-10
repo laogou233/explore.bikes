@@ -2,9 +2,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreedomExplore 单车</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>FreedomExplore</title>
+  <!-- 引入 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
+    /* 全局重置 */
     * {
       margin: 0;
       padding: 0;
@@ -21,13 +23,17 @@
       padding: 2rem;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.5rem;
-      letter-spacing: 2px;
+    /* 签名字体 */
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #fff;
+      letter-spacing: 1px;
     }
     header p {
       color: #aaa;
       font-size: 1.1rem;
+      margin-top: 0.5rem;
     }
     nav {
       background: #1a1a1a;
@@ -79,7 +85,8 @@
 </head>
 <body>
   <header>
-    <h1>FreedomExplore</h1>
+    <!-- 应用签名字体 -->
+    <h1 class="signature">FreedomExplore</h1>
     <p>自由 · 探索 · 热爱单车</p>
   </header>  <nav>
     <a href="#about">品牌故事</a>
@@ -96,7 +103,120 @@
     <p>• TrailX 轻量山地车型（适合长途）</p>
     <p>• DH-Pro 专业速降级别（适合极限越野）</p>
     <p>• UrbanScout 城市通勤款（轻盈舒适）</p>
-    <p>（可添加图片、3D 旋转展示、产品页面）</p>
+  </section>  <section class="section" id="contact">
+    <h3>联系我们</h3>
+    <p>Email: contact@freedomexplore.com</p>
+    <p>微信 / 微博：@FreedomExplore单车</p>
+    <p>地址：海南 · 三亚</p>
+  </section>  <footer>
+    &copy; 2021-2025 FreedomExplore. All rights reserved.
+  </footer>
+</body>
+</html><!DOCTYPE html><html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreedomExplore</title>
+  <!-- 引入 Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    /* 全局重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #000;
+      padding: 2rem;
+      text-align: center;
+    }
+    /* 签名字体 */
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+    header p {
+      color: #aaa;
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #ccc;
+      margin: 0 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1516275466593-bb6113aa0d94?fit=crop&w=1400&q=80') no-repeat center center/cover;
+      padding: 6rem 2rem;
+      text-align: center;
+    }
+    .hero h2 {
+      background-color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      border-radius: 8px;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      color: #ccc;
+      margin-bottom: 1.2rem;
+    }
+    footer {
+      background: #000;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- 应用签名字体 -->
+    <h1 class="signature">FreedomExplore</h1>
+    <p>自由 · 探索 · 热爱单车</p>
+  </header>  <nav>
+    <a href="#about">品牌故事</a>
+    <a href="#bikes">车型展示</a>
+    <a href="#contact">联系我们</a>
+  </nav>  <section class="hero">
+    <h2>自由不是终点，而是不断出发的勇气</h2>
+  </section>  <section class="section" id="about">
+    <h3>品牌故事</h3>
+    <p>FreedomExplore 于 2021 年 5 月 25 日诞生于山野与城市之间，旨在用骑行连接人与自然，让每一段旅途都成为探索的证明。自由，是我们坚持的方向；探索，是我们永恒的热情。</p>
+    <p>我们不仅做单车，更打造一种生活方式：自由 · 探索 · 热爱。</p>
+  </section>  <section class="section" id="bikes">
+    <h3>车型展示</h3>
+    <p>• TrailX 轻量山地车型（适合长途）</p>
+    <p>• DH-Pro 专业速降级别（适合极限越野）</p>
+    <p>• UrbanScout 城市通勤款（轻盈舒适）</p>
   </section>  <section class="section" id="contact">
     <h3>联系我们</h3>
     <p>Email: contact@freedomexplore.com</p>
