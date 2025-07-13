@@ -1,20 +1,11 @@
-<!DOCTYPE html><html lang="zh-CN">
-<head>
-  <link rel="stylesheet" href="style.css">
-  <head>
+<!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FreedomExplore</title>
-  <link rel="stylesheet" href="style.css">
-  </head>
   <link rel="icon" href="file_000000009c1461f7bfed0c58550de573.png" type="image/x-icon">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreedomExplore</title>
   <!-- 引入 Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
-    /* 全局重置 */
     * {
       margin: 0;
       padding: 0;
@@ -31,7 +22,6 @@
       padding: 2rem;
       text-align: center;
     }
-    /* 签名字体 */
     .signature {
       font-family: 'Great Vibes', cursive;
       font-size: 3.5rem;
@@ -82,6 +72,48 @@
       color: #ccc;
       margin-bottom: 1.2rem;
     }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .product-card {
+      background: #1c1c1c;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+    .product-card h4 {
+      color: #fff;
+      margin-bottom: 0.4rem;
+    }
+    .product-card p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    .coming-soon {
+      opacity: 0.6;
+      position: relative;
+    }
+    .coming-soon::after {
+      content: "Coming Soon";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: orange;
+      color: white;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 5px;
+    }
     footer {
       background: #000;
       padding: 2rem;
@@ -93,53 +125,60 @@
 </head>
 <body>
   <header>
-    <!-- 应用签名字体 -->
     <h1 class="signature">FreedomExplore</h1>
     <p>自由 · 探索 · 热爱单车</p>
-  </header>  <nav>
+  </header>
+  <nav>
     <a href="#about">品牌故事</a>
-    <a href="#bikes">产品展示</a>
+    <a href="#products">产品展示</a>
     <a href="#contact">联系我们</a>
-  </nav>  <section class="hero">
+  </nav>
+  <section class="hero">
     <h2>自由不是终点，而是不断出发的勇气</h2>
-  </section>  <section class="section" id="about">
+  </section>
+  <section class="section" id="about">
     <h3>品牌故事</h3>
     <p>FreedomExplore 于 2021 年 5 月 25 日诞生于山野与城市之间，旨在用骑行连接人与自然，让每一段旅途都成为探索的证明。自由，是我们坚持的方向；探索，是我们永恒的热情。</p>
     <p>我们不仅做单车，更打造一种生活方式：自由 · 探索 · 热爱。</p>
-  </section>  <section class="section" id="bikes">
+  </section>
+  <section class="section" id="products">
     <h3>产品展示</h3>
-    <p>• TrailX 轻量山地车型（适合长途）</p>
-    <p>• DH-Pro 专业速降级别（适合极限越野）</p>
-    <p>• UrbanScout 城市通勤款（轻盈舒适）</p>
-    <p>·周边
-      <img
-        src=1000016934.png alt="explore.bike贴纸"style"=max-width:100%;
-      height:auto;">
-  </section>  <section class="section" id="contact">
+    <div class="products">
+      <div class="product-card">
+        <img src="1000016934.png" alt="Explore 贴纸">
+        <h4>Explore.Bike 山地贴纸</h4>
+        <p>户外防水 · 热门款 · ¥12.00</p>
+      </div>
+      <div class="product-card coming-soon">
+        <img src="images/tshirt-preview.jpg" alt="T恤 Coming Soon">
+        <h4>FreedomExplore 纯棉T恤</h4>
+        <p>舒适透气 · 即将上线</p>
+      </div>
+      <div class="product-card coming-soon">
+        <img src="images/cap-preview.jpg" alt="帽子 Coming Soon">
+        <h4>Explore 骑行帽</h4>
+        <p>防晒设计 · 敬请期待</p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contact">
     <h3>联系我们</h3>
     <p>Email: contact@freedomexplore.com</p>
-    <p>微信:laogoual233/ 微博：@FreedomExplore单车</p>
+    <p>微信: laogoual233 / 微博：@FreedomExplore单车</p>
     <p>地址：海南 · 三亚</p>
-  </section>  <footer>
-    <section class="section" id="contact">
-  <h3>联系我们</h3>
-  <p>Email: contact@freedomexplore.com</p>
-  <p>地址：海南 · 三亚</p>
-
-  <!-- 社交媒体链接 -->
-  <div class="social-icons">
-    <a href="https://weibo.com/yourname" target="_blank" title="微博">
-      <img src="weibo-icon.png" alt="微博" />
-    </a>
-    <a href="https://instagram.com/yourname" target="_blank" title="Instagram">
-      <img src="instagram-icon.png" alt="Instagram" />
-    </a>
-    <a href="https://www.xiaohongshu.com/user/yourname" target="_blank" title="小红书">
-      <img src="red-icon.png" alt="小红书" />
-    </a>
-  </div>
-</section>
-
+    <div class="social-icons">
+      <a href="https://weibo.com/yourname" target="_blank" title="微博">
+        <img src="weibo-icon.png" alt="微博" />
+      </a>
+      <a href="https://instagram.com/yourname" target="_blank" title="Instagram">
+        <img src="instagram-icon.png" alt="Instagram" />
+      </a>
+      <a href="https://www.xiaohongshu.com/user/yourname" target="_blank" title="小红书">
+        <img src="red-icon.png" alt="小红书" />
+      </a>
+    </div>
+  </section>
+  <footer>
     &copy; 2021-2025 FreedomExplore. All rights reserved.
   </footer>
 </body>
