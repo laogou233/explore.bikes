@@ -16,6 +16,51 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      font-size: 16px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    button {
+      background-color: #fff;
+      color: #000;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #eee;
+    }
+    @media (max-width: 768px) {
+      body { font-size: 15px; }
+    }
+    @media (max-width: 480px) {
+      body { font-size: 14px; }
+    }
+    .social-icons {
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      display: inline-block;
+      margin-right: 15px;
+    }
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0) invert(1);
+      transition: transform 0.2s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
     }
     header {
       background-color: #000;
@@ -50,7 +95,6 @@
       cursor: pointer;
     }
     nav a:hover { color: #fff; }
-
     nav ul ul {
       position: absolute;
       top: 100%;
@@ -75,7 +119,6 @@
     nav li:hover > ul {
       display: block;
     }
-
     main {
       flex: 1;
       display: flex;
@@ -92,7 +135,6 @@
       padding: 1rem 2rem;
       border-radius: 8px;
     }
-
     footer {
       background: #000;
       padding: 1.5rem 2rem;
@@ -100,7 +142,6 @@
       color: #888;
       font-size: 0.9rem;
     }
-
     @media (max-width: 600px) {
       nav ul {
         flex-direction: column;
@@ -122,7 +163,6 @@
   <header>
     <h1 class="signature">FreedomExplore</h1>
   </header>
-
   <nav>
     <ul>
       <li><a href="#">首页</a></li>
@@ -144,11 +184,9 @@
       <li><a href="#contact">联系我们</a></li>
     </ul>
   </nav>
-
   <main>
     <h2>自由不是终点，而是不断出发的勇气</h2>
   </main>
-
   <footer>
     &copy; 2021-2025 FreedomExplore. All rights reserved.
   </footer>
