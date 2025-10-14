@@ -1,194 +1,218 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FreedomExplore</title>
-  <link rel="icon" href="file_000000009c1461f7bfed0c58550de573.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #111;
-      color: #fff;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      font-size: 16px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-    button {
-      background-color: #fff;
-      color: #000;
-      padding: 0.6rem 1rem;
-      border: none;
-      border-radius: 4px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #eee;
-    }
-    @media (max-width: 768px) {
-      body { font-size: 15px; }
-    }
-    @media (max-width: 480px) {
-      body { font-size: 14px; }
-    }
-    .social-icons {
-      margin-top: 1rem;
-    }
-    .social-icons a {
-      display: inline-block;
-      margin-right: 15px;
-    }
-    .social-icons img {
-      width: 32px;
-      height: 32px;
-      filter: brightness(0) invert(1);
-      transition: transform 0.2s;
-    }
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-    header {
-      background-color: #000;
-      padding: 2rem;
-      text-align: center;
-    }
-    .signature {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-    nav {
-      background: #1a1a1a;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-    nav li {
-      position: relative;
-    }
-    nav a {
-      display: block;
-      color: #ccc;
-      padding: 1rem 0;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-      cursor: pointer;
-    }
-    nav a:hover { color: #fff; }
-    nav ul ul {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #222;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.7);
-      display: none;
-      min-width: 160px;
-      z-index: 1000;
-    }
-    nav ul ul li { width: 100%; }
-    nav ul ul a {
-      padding: 0.75rem 1rem;
-      font-weight: normal;
-      color: #ddd;
-    }
-    nav ul ul a:hover {
-      background: #444;
-      color: #fff;
-    }
-    nav li:hover > ul {
-      display: block;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    main h2 {
-      font-size: 2rem;
-      max-width: 500px;
-      background-color: rgba(0,0,0,0.6);
-      padding: 1rem 2rem;
-      border-radius: 8px;
-    }
-    footer {
-      background: #000;
-      padding: 1.5rem 2rem;
-      text-align: center;
-      color: #888;
-      font-size: 0.9rem;
-    }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 0;
-      }
-      nav li { width: 100%; }
-      nav ul ul {
-        position: static;
-        box-shadow: none;
-        border-radius: 0;
-      }
-      nav ul ul a {
-        padding-left: 2rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Bikes - 专业自行车周边装备</title>
+    <meta name="description" content="探索自行车周边 - 专业骑行服饰、定制贴纸、配件装备">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 class="signature">FreedomExplore</h1>
-  </header>
-  <nav>
-    <ul>
-      <li><a href="#">首页 ▼< </a></li>
-      <li>
-        <a href="#">品牌故事 ▼</a>
-        <ul>
-          <li><a href="#about">关于我们</a></li>
-          <li><a href="#team">团队介绍</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">产品展示 ▼</a>
-        <ul>
-          <li><a href="#stickers">贴纸</a></li>
-          <li><a href="#apparel">服饰</a></li>
-          <li><a href="#accessories">配件</a></li>
-        </ul>
-      </li>
-      <li><a href="#contact">联系我们</a></li>
-    </ul>
-  </nav>
-  <main>
-    <h2>自由不是终点，而是不断出发的勇气</h2>
-  </main>
-  <footer>
-    &copy; 2021-2025 FreedomExplore. All rights reserved.
-  </footer>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Explore Bikes</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">首页</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">周边产品</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">关于我们</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">联系我们</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">骑行生活<br>由此开始</h1>
+            <p class="hero-subtitle">专业自行车周边装备 · 品质骑行服饰 · 个性定制贴纸</p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">探索产品</a>
+                <a href="#contact" class="btn btn-secondary">关注我们</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="自行车周边产品" loading="lazy">
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">精选周边</h2>
+            <p class="section-subtitle">为骑行爱好者打造的优质装备</p>
+            
+            <div class="products-grid">
+                <!-- 骑行服饰 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="骑行服饰" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">骑行服饰系列</h3>
+                        <p class="product-description">专业骑行服、速干T恤、防风外套</p>
+                        <div class="product-price">¥199 - ¥899</div>
+                    </div>
+                </div>
+
+                <!-- 定制贴纸 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584824486537-46e47d8bd0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="定制贴纸" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">个性定制贴纸</h3>
+                        <p class="product-description">防水 vinyl 材质，多种设计可选</p>
+                        <div class="product-price">¥15 - ¥45</div>
+                    </div>
+                </div>
+
+                <!-- 骑行配件 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="骑行配件" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">骑行配件装备</h3>
+                        <p class="product-description">水壶、手套、头盔、维修工具</p>
+                        <div class="product-price">¥59 - ¥399</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>关于 Explore Bikes</h2>
+                    <p>我们致力于为骑行爱好者提供高品质的周边产品和装备。从专业的骑行服饰到个性化的定制贴纸，每一件产品都承载着我们对骑行的热爱。</p>
+                    <p>关注我们的社交媒体，获取最新的产品信息和骑行文化内容。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="关于我们" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社交媒体 -->
+    <section class="social-section">
+        <div class="container">
+            <h2 class="section-title">关注我们</h2>
+            <p class="section-subtitle">获取最新产品和骑行资讯</p>
+            
+            <div class="social-grid">
+                <a href="#" class="social-card wechat">
+                    <div class="social-icon">💬</div>
+                    <h3>微信公众号</h3>
+                    <p>ExploreBikes</p>
+                    <span class="social-tip">扫码关注</span>
+                </a>
+
+                <a href="#" class="social-card redbook">
+                    <div class="social-icon">📕</div>
+                    <h3>小红书</h3>
+                    <p>探索自行车</p>
+                    <span class="social-tip">点击关注</span>
+                </a>
+
+                <a href="#" class="social-card douyin">
+                    <div class="social-icon">🎵</div>
+                    <h3>抖音</h3>
+                    <p>@explorebikes</p>
+                    <span class="social-tip">点击关注</span>
+                </a>
+
+                <a href="#" class="social-card kuaishou">
+                    <div class="social-icon">⚡</div>
+                    <h3>快手</h3>
+                    <p>探索自行车</p>
+                    <span class="social-tip">点击关注</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>获取产品信息</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>contact@explorebikes.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+86 138 0013 8000</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span>北京市朝阳区骑行文化中心</span>
+                            </div>
+                    </div>
+                    
+                    <!-- 微信二维码 -->
+                    <div class="qrcode-section">
+                        <h4>微信联系我们</h4>
+                        <div class="qrcode-placeholder">
+                            <div class="qrcode-image">
+                                <!-- 这里可以放微信二维码图片 -->
+                                <div class="qrcode-text">微信二维码</div>
+                            </div>
+                            <p>扫码添加微信客服</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <h3>发送消息</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="您的姓名">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="电子邮箱">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="联系电话">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="请告诉我们您的需求..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">发送消息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Explore Bikes</div>
+                <p>&copy; 2024 Explore Bikes. 保留所有权利.</p>
+                <div class="footer-links">
+                    <a href="#home">首页</a>
+                    <a href="#products">产品</a>
+                    <a href="#about">关于</a>
+                    <a href="#contact">联系</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
