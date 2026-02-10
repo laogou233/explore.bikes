@@ -1,24 +1,52 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Bikes - 专业自行车周边装备</title>
-    <meta name="description" content="探索自行车周边 - 专业骑行服饰、定制贴纸、配件装备">
+    <title>Explore Bikes - Professional Cycling Gear & Merch</title>
+    <meta name="description" content="Premium cycling apparel, custom weatherproof stickers, and essential riding gear.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* WhatsApp Floating Button Style */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            padding: 12px 24px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            background-color: #128c7e;
+            color: #FFF;
+        }
+        .whatsapp-icon {
+            width: 25px;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <span class="logo-text">Explore Bikes</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">首页</a></li>
-                <li class="nav-item"><a href="#products" class="nav-link">周边产品</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">关于我们</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">联系我们</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Merch</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -28,171 +56,142 @@
         </div>
     </nav>
 
-    <!-- 英雄区域 -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">骑行生活<br>由此开始</h1>
-            <p class="hero-subtitle">专业自行车周边装备 · 品质骑行服饰 · 个性定制贴纸</p>
+            <h1 class="hero-title">Ride in Style,<br>Explore More</h1>
+            <p class="hero-subtitle">Premium Cycling Apparel · Custom Weatherproof Stickers · Essential Gear</p>
             <div class="hero-buttons">
-                <a href="#products" class="btn btn-primary">探索产品</a>
-                <a href="#contact" class="btn btn-secondary">关注我们</a>
+                <a href="#products" class="btn btn-primary">Shop Collection</a>
+                <a href="https://wa.me/8613800138000" class="btn btn-secondary" target="_blank">Chat with Us</a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="自行车周边产品" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cycling Gear" loading="lazy">
         </div>
     </section>
 
-    <!-- 产品展示 -->
     <section id="products" class="products-section">
         <div class="container">
-            <h2 class="section-title">精选周边</h2>
-            <p class="section-subtitle">为骑行爱好者打造的优质装备</p>
+            <h2 class="section-title">Featured Merch</h2>
+            <p class="section-subtitle">High-quality gear designed for cyclists by cyclists</p>
             
             <div class="products-grid">
-                <!-- 骑行服饰 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="骑行服饰" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Apparel" loading="lazy">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">骑行服饰系列</h3>
-                        <p class="product-description">专业骑行服、速干T恤、防风外套</p>
-                        <div class="product-price">¥199 - ¥899</div>
+                        <h3 class="product-title">Performance Apparel</h3>
+                        <p class="product-description">Pro jerseys, tech tees, and windbreakers</p>
+                        <div class="product-price">$29 - $129</div>
                     </div>
                 </div>
 
-                <!-- 定制贴纸 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1584824486537-46e47d8bd0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="定制贴纸" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1584824486537-46e47d8bd0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Stickers" loading="lazy">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">个性定制贴纸</h3>
-                        <p class="product-description">防水 vinyl 材质，多种设计可选</p>
-                        <div class="product-price">¥15 - ¥45</div>
+                        <h3 class="product-title">Vinyl Stickers</h3>
+                        <p class="product-description">Waterproof & UV resistant, custom designs available</p>
+                        <div class="product-price">$3 - $15</div>
                     </div>
                 </div>
 
-                <!-- 骑行配件 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="骑行配件" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Accessories" loading="lazy">
                     </div>
                     <div class="product-content">
-                        <h3 class="product-title">骑行配件装备</h3>
-                        <p class="product-description">水壶、手套、头盔、维修工具</p>
-                        <div class="product-price">¥59 - ¥399</div>
+                        <h3 class="product-title">Cycling Accessories</h3>
+                        <p class="product-description">Bottles, gloves, and essential tools</p>
+                        <div class="product-price">$10 - $59</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 关于我们 -->
     <section id="about" class="about-section">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <h2>关于 Explore Bikes</h2>
-                    <p>我们致力于为骑行爱好者提供高品质的周边产品和装备。从专业的骑行服饰到个性化的定制贴纸，每一件产品都承载着我们对骑行的热爱。</p>
-                    <p>关注我们的社交媒体，获取最新的产品信息和骑行文化内容。</p>
+                    <h2>About Explore Bikes</h2>
+                    <p>We are dedicated to providing cycling enthusiasts with premium merch and gear. From performance apparel to personalized stickers, every product carries our passion for the ride.</p>
+                    <p>Follow us on social media for the latest drops and cycling culture updates.</p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="关于我们" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="About Us" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 社交媒体 -->
     <section class="social-section">
         <div class="container">
-            <h2 class="section-title">关注我们</h2>
-            <p class="section-subtitle">获取最新产品和骑行资讯</p>
+            <h2 class="section-title">Follow Us</h2>
+            <p class="section-subtitle">Get the latest updates and inspirations</p>
             
             <div class="social-grid">
-                <a href="#" class="social-card wechat">
-                    <div class="social-icon">💬</div>
-                    <h3>微信公众号</h3>
-                    <p>ExploreBikes</p>
-                    <span class="social-tip">扫码关注</span>
-                </a>
-
-                <a href="#" class="social-card redbook">
-                    <div class="social-icon">📕</div>
-                    <h3>小红书</h3>
-                    <p>探索自行车</p>
-                    <span class="social-tip">点击关注</span>
-                </a>
-
-                <a href="#" class="social-card douyin">
-                    <div class="social-icon">🎵</div>
-                    <h3>抖音</h3>
+                <a href="#" class="social-card">
+                    <div class="social-icon">📸</div>
+                    <h3>Instagram</h3>
                     <p>@explorebikes</p>
-                    <span class="social-tip">点击关注</span>
+                    <span class="social-tip">Follow for daily rides</span>
                 </a>
 
-                <a href="#" class="social-card kuaishou">
-                    <div class="social-icon">⚡</div>
-                    <h3>快手</h3>
-                    <p>探索自行车</p>
-                    <span class="social-tip">点击关注</span>
+                <a href="#" class="social-card">
+                    <div class="social-icon">📱</div>
+                    <h3>TikTok</h3>
+                    <p>@explorebikes</p>
+                    <span class="social-tip">Short bike clips</span>
+                </a>
+
+                <a href="https://wa.me/8613800138000" class="social-card">
+                    <div class="social-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Direct Message</p>
+                    <span class="social-tip">Click to chat</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 联系我们 -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">联系我们</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>获取产品信息</h3>
+                    <h3>Inquiry & Support</h3>
                     <div class="contact-details">
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
                             <span>contact@explorebikes.com</span>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <span>+86 138 0013 8000</span>
-                        </div>
-                        <div class="contact-item">
                             <span class="contact-icon">📍</span>
-                            <span>北京市朝阳区骑行文化中心</span>
-                            </div>
-                    </div>
-                    
-                    <!-- 微信二维码 -->
-                    <div class="qrcode-section">
-                        <h4>微信联系我们</h4>
-                        <div class="qrcode-placeholder">
-                            <div class="qrcode-image">
-                                <!-- 这里可以放微信二维码图片 -->
-                                <div class="qrcode-text">微信二维码</div>
-                            </div>
-                            <p>扫码添加微信客服</p>
+                            <span>Global Shipping Center</span>
                         </div>
+                    </div>
+                    <div style="margin-top: 20px; color: #666; font-size: 0.9em;">
+                        <p>✓ Worldwide Shipping</p>
+                        <p>✓ Custom Designs Available</p>
+                        <p>✓ 24/7 Support via WhatsApp</p>
                     </div>
                 </div>
                 
-                <form class="contact-form">
-                    <h3>发送消息</h3>
+                <form class="contact-form" action="https://formspree.io/f/你的ID" method="POST">
+                    <h3>Drop us a message</h3>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder="您的姓名">
+                        <input type="text" name="name" required placeholder="Full Name">
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder="电子邮箱">
+                        <input type="email" name="email" required placeholder="Email Address">
                     </div>
                     <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="联系电话">
+                        <textarea name="message" rows="5" placeholder="Tell us what you are looking for..." required></textarea>
                     </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" placeholder="请告诉我们您的需求..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">发送消息</button>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
         </div>
@@ -202,16 +201,21 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">Explore Bikes</div>
-                <p>&copy; 2024 Explore Bikes. 保留所有权利.</p>
+                <p>&copy; 2024 Explore Bikes. All Rights Reserved.</p>
                 <div class="footer-links">
-                    <a href="#home">首页</a>
-                    <a href="#products">产品</a>
-                    <a href="#about">关于</a>
-                    <a href="#contact">联系</a>
+                    <a href="#home">Home</a>
+                    <a href="#products">Merch</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/8613800138000" class="whatsapp-float" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="whatsapp-icon" alt="WhatsApp">
+        <strong>Chat with Us</strong>
+    </a>
 
     <script src="script.js"></script>
 </body>
