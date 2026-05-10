@@ -35,3 +35,34 @@ document.addEventListener('click', (e) => {
     });
   }
 });
+
+// 滚动淡入动画
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.product-card, .social-card, .about-grid, .contact-grid, .section-title').forEach(el => {
+  el.classList.add('fade-up');
+  observer.observe(el);
+});
+
+/* 滚动淡入 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card:nth-child(2) { transition-delay: 0.1s; }
+.product-card:nth-child(3) { transition-delay: 0.2s; }
+.social-card:nth-child(2) { transition-delay: 0.1s; }
+.social-card:nth-child(3) { transition-delay: 0.2s; }
