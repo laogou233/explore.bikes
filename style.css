@@ -276,3 +276,20 @@ a { text-decoration: none; color: inherit; }
   .hero-content { padding: 48px 20px 32px; }
   .products-section, .about-section, .social-section, .contact-section { padding: 80px 0; }
 }
+
+/* 滚动淡入 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.product-card:nth-child(2) { transition-delay: 0.1s; }
+.product-card:nth-child(3) { transition-delay: 0.2s; }
+.social-card:nth-child(2) { transition-delay: 0.1s; }
+.social-card:nth-child(3) { transition-delay: 0.2s; }
