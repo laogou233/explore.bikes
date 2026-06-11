@@ -1,222 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore Bikes - Professional Cycling Gear & Merch</title>
-    <meta name="description" content="Premium cycling apparel, custom weatherproof stickers, and essential riding gear.">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* WhatsApp Floating Button Style */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            padding: 12px 24px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            transition: all 0.3s ease;
-        }
-        .whatsapp-float:hover {
-            transform: scale(1.05);
-            background-color: #128c7e;
-            color: #FFF;
-        }
-        .whatsapp-icon {
-            width: 25px;
-            margin-right: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore Bike - Minimal Cycling Stickers and Gear</title>
+  <meta name="description" content="Explore Bike creates clean cycling stickers, small gear drops, and custom rider graphics.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Explore Bikes</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#products" class="nav-link">Merch</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Ride in Style,<br>Explore More</h1>
-            <p class="hero-subtitle">Premium Cycling Apparel · Custom Weatherproof Stickers · Essential Gear</p>
-            <div class="hero-buttons">
-                <a href="#products" class="btn btn-primary">Shop Collection</a>
-                <a href="https://wa.me/8613800138000" class="btn btn-secondary" target="_blank">Chat with Us</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cycling Gear" loading="lazy">
-        </div>
-    </section>
-
-    <section id="products" class="products-section">
-        <div class="container">
-            <h2 class="section-title">Featured Merch</h2>
-            <p class="section-subtitle">High-quality gear designed for cyclists by cyclists</p>
-            
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Apparel" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Performance Apparel</h3>
-                        <p class="product-description">Pro jerseys, tech tees, and windbreakers</p>
-                        <div class="product-price">$29 - $129</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1584824486537-46e47d8bd0b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Stickers" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Vinyl Stickers</h3>
-                        <p class="product-description">Waterproof & UV resistant, custom designs available</p>
-                        <div class="product-price">$3 - $15</div>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Accessories" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Cycling Accessories</h3>
-                        <p class="product-description">Bottles, gloves, and essential tools</p>
-                        <div class="product-price">$10 - $59</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2>About Explore Bikes</h2>
-                    <p>We are dedicated to providing cycling enthusiasts with premium merch and gear. From performance apparel to personalized stickers, every product carries our passion for the ride.</p>
-                    <p>Follow us on social media for the latest drops and cycling culture updates.</p>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="About Us" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="social-section">
-        <div class="container">
-            <h2 class="section-title">Follow Us</h2>
-            <p class="section-subtitle">Get the latest updates and inspirations</p>
-            
-            <div class="social-grid">
-                <a href="#" class="social-card">
-                    <div class="social-icon">📸</div>
-                    <h3>Instagram</h3>
-                    <p>@explorebikes</p>
-                    <span class="social-tip">Follow for daily rides</span>
-                </a>
-
-                <a href="#" class="social-card">
-                    <div class="social-icon">📱</div>
-                    <h3>TikTok</h3>
-                    <p>@explorebikes</p>
-                    <span class="social-tip">Short bike clips</span>
-                </a>
-
-                <a href="https://wa.me/8613800138000" class="social-card">
-                    <div class="social-icon">💬</div>
-                    <h3>WhatsApp</h3>
-                    <p>Direct Message</p>
-                    <span class="social-tip">Click to chat</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Inquiry & Support</h3>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span>contact@explorebikes.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <span>Global Shipping Center</span>
-                        </div>
-                    </div>
-                    <div style="margin-top: 20px; color: #666; font-size: 0.9em;">
-                        <p>✓ Worldwide Shipping</p>
-                        <p>✓ Custom Designs Available</p>
-                        <p>✓ 24/7 Support via WhatsApp</p>
-                    </div>
-                </div>
-                
-                <form class="contact-form" action="https://formspree.io/f/你的ID" method="POST">
-                    <h3>Drop us a message</h3>
-                    <div class="form-group">
-                        <input type="text" name="name" required placeholder="Full Name">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" required placeholder="Email Address">
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Tell us what you are looking for..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">Explore Bikes</div>
-                <p>&copy; 2024 Explore Bikes. All Rights Reserved.</p>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#products">Merch</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <a href="https://wa.me/8613800138000" class="whatsapp-float" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="whatsapp-icon" alt="WhatsApp">
-        <strong>Chat with Us</strong>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Explore Bike home">
+      <span class="brand-mark"></span>
+      <span>Explore Bike</span>
     </a>
 
-    <script src="script.js"></script>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#drops">Drops</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Cycling stickers and small gear drops</p>
+        <h1 id="hero-title">Ride light.<br>Explore<br>more.</h1>
+        <p class="hero-text">
+          Clean black and white graphics for riders, bikes, helmets, bottles, laptops, and wherever the next route takes you.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://wa.me/8613800138000" target="_blank" rel="noreferrer">Order on WhatsApp</a>
+          <a class="button button-secondary" href="#work">View designs</a>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Explore Bike illustrated sticker">
+        <img src="1000016934.png" alt="Explore Bike mountain cycling sticker illustration">
+      </div>
+    </section>
+
+    <section id="work" class="section intro-section">
+      <div class="section-heading">
+        <p class="eyebrow">Simple, durable, ready to ride</p>
+        <h2>Made for the small details that make a bike yours.</h2>
+      </div>
+      <div class="intro-grid">
+        <article class="text-block">
+          <span>01</span>
+          <h3>Weatherproof stickers</h3>
+          <p>Minimal monochrome decals with a clean outdoor look, built for frames, helmets, cases, and travel gear.</p>
+        </article>
+        <article class="text-block">
+          <span>02</span>
+          <h3>Custom rider graphics</h3>
+          <p>Short-run designs for clubs, trips, teams, and personal builds without making the process complicated.</p>
+        </article>
+        <article class="text-block">
+          <span>03</span>
+          <h3>Small gear drops</h3>
+          <p>Limited tees, badges, and ride extras that stay useful, quiet, and easy to pair with daily kit.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="drops" class="feature-strip">
+      <div class="feature-image">
+        <img src="1000016929.png" alt="Explore Bike black square logo artwork">
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow">Current design</p>
+        <h2>Coastal helmet mark</h2>
+        <p>
+          A compact line-art graphic with palms, sun, ocean, and helmet details. Works as a sticker, print, or simple brand mark.
+        </p>
+        <dl class="spec-list">
+          <div>
+            <dt>Style</dt>
+            <dd>Black and white</dd>
+          </div>
+          <div>
+            <dt>Use</dt>
+            <dd>Sticker / shirt / badge</dd>
+          </div>
+          <div>
+            <dt>Custom</dt>
+            <dd>Name and route text available</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="quote-band" aria-label="Brand statement">
+      <img src="file_000000009c1461f7bfed0c58550de573.png" alt="Freedom Explore lettering">
+      <p>Small graphics for open roads, quiet mornings, and bikes that feel personal.</p>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div>
+        <p class="eyebrow">Start a small run</p>
+        <h2>Send your idea. Keep it simple.</h2>
+      </div>
+      <div class="contact-panel">
+        <p>
+          Message with the design you like, quantity, size, and where you want to place it. We can keep the first version minimal and adjust from there.
+        </p>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://wa.me/8613800138000" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a class="button button-secondary" href="mailto:contact@explorebikes.com">Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Explore Bike</p>
+    <p>© 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
