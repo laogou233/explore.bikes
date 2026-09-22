@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://laogou233.github.io/explore.bikes/sitemap.xml
