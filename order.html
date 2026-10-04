@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Draft - Explore Bike</title>
+  <meta name="description" content="Review your Explore Bike apparel concept selections.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" href="1000016929.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Explore Bike home">
+      <span class="brand-mark"></span>
+      <span>Explore Bike</span>
+    </a>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html#collection">Collection</a>
+      <a href="index.html#about">About</a>
+      <a href="site-map.html">Site map</a>
+      <a class="nav-draft" href="order.html" aria-current="page">Order draft <span data-cart-count>0</span></a>
+    </nav>
+  </header>
+
+  <main class="order-main">
+    <div class="order-heading">
+      <p class="eyebrow">Explore Bike / Design preview</p>
+      <h1>Order draft</h1>
+      <p>Your selections are saved in this browser only. No order is submitted or paid for.</p>
+    </div>
+
+    <div id="order-content" class="order-layout">
+      <section aria-labelledby="items-title">
+        <div class="order-section-heading">
+          <h2 id="items-title">Selected pieces</h2>
+          <span data-item-count>0 items</span>
+        </div>
+        <div id="order-items"></div>
+      </section>
+
+      <aside class="order-summary" aria-labelledby="summary-title">
+        <p class="eyebrow">Review / 01</p>
+        <h2 id="summary-title">Your summary</h2>
+        <div class="summary-line"><span>Pieces</span><strong data-summary-count>0</strong></div>
+        <div class="summary-line"><span>Prices</span><strong>To be confirmed</strong></div>
+        <p>These are concept previews. Copy the list for your records; it is not sent to Explore Bike.</p>
+        <button id="copy-summary" class="action-button" type="button">Copy summary</button>
+        <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+      </aside>
+    </div>
+
+    <div id="empty-order" class="empty-order" hidden>
+      <h2>Your draft is empty.</h2>
+      <p>Explore the concept collection and save the pieces you like.</p>
+      <a class="action-button" href="index.html#collection">View collection</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Explore Bike</p>
+    <div><a href="site-map.html">Site map</a><a href="index.html#collection">Collection</a></div>
+    <p>&copy; 2026</p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>
