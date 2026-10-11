@@ -47,8 +47,18 @@
         <p>Design previews. Final details, prices, and availability are not confirmed.</p>
       </div>
 
+      <div class="category-toolbar" hidden>
+        <div class="category-filters" role="group" aria-label="Filter apparel by category">
+          <button class="category-filter" type="button" data-category-filter="all" aria-pressed="true">All <span data-category-count>03</span></button>
+          <button class="category-filter" type="button" data-category-filter="tees" aria-pressed="false">T-shirts <span data-category-count>01</span></button>
+          <button class="category-filter" type="button" data-category-filter="hoodies" aria-pressed="false">Hoodies <span data-category-count>01</span></button>
+          <button class="category-filter" type="button" data-category-filter="jerseys" aria-pressed="false">Jerseys <span data-category-count>01</span></button>
+        </div>
+        <p class="category-status" data-category-status role="status" aria-live="polite">Showing 3 pieces</p>
+      </div>
+
       <div class="product-grid">
-        <article class="product-card" id="coastal-tee" data-product-id="coastal-tee">
+        <article class="product-card" id="coastal-tee" data-product-id="coastal-tee" data-category="tees">
           <div class="product-media media-tee">
             <a href="coastal-tee.html" aria-label="View Coastal Graphic Tee details"><img src="assets/coastal-tee-concept.png" alt="Concept preview of a black Explore Bike graphic T-shirt" width="900" height="900"></a>
             <span class="preview-label">Design preview</span>
@@ -71,7 +81,7 @@
           </div>
         </article>
 
-        <article class="product-card" id="coastal-hoodie" data-product-id="coastal-hoodie">
+        <article class="product-card" id="coastal-hoodie" data-product-id="coastal-hoodie" data-category="hoodies">
           <div class="product-media media-hoodie">
             <a href="coastal-hoodie.html" aria-label="View Coastal Pullover details"><img src="assets/coastal-hoodie-concept.png" alt="Concept preview of a gray Explore Bike pullover hoodie" width="900" height="900" loading="lazy"></a>
             <span class="preview-label">Design preview</span>
@@ -94,7 +104,7 @@
           </div>
         </article>
 
-        <article class="product-card" id="freedom-jersey" data-product-id="freedom-jersey">
+        <article class="product-card" id="freedom-jersey" data-product-id="freedom-jersey" data-category="jerseys">
           <div class="product-media media-jersey">
             <a href="freedom-jersey.html" aria-label="View Freedom Jersey details"><img src="assets/freedom-jersey-concept.png" alt="Concept preview of a green Freedom Explore cycling jersey" width="900" height="900" loading="lazy"></a>
             <span class="preview-label">Design preview</span>

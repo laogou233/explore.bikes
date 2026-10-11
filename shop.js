@@ -59,6 +59,59 @@ function showToast(message) {
   toastTimeout = setTimeout(() => { toast.hidden = true; }, 3500);
 }
 
+const categoryToolbar = document.querySelector('.category-toolbar');
+
+if (categoryToolbar) {
+  const grid = document.querySelector('.product-grid');
+  const cards = [...grid.querySelectorAll('.product-card[data-category]')];
+  const filters = [...categoryToolbar.querySelectorAll('[data-category-filter]')];
+  const status = categoryToolbar.querySelector('[data-category-status]');
+  const categories = new Set(filters.map((button) => button.dataset.categoryFilter));
+
+  filters.forEach((button) => {
+    const count = button.dataset.categoryFilter === 'all'
+      ? cards.length
+      : cards.filter((card) => card.dataset.category === button.dataset.categoryFilter).length;
+    button.querySelector('[data-category-count]').textContent = String(count).padStart(2, '0');
+  });
+
+  function showCategory(category) {
+    let visibleCount = 0;
+    cards.forEach((card) => {
+      card.hidden = category !== 'all' && card.dataset.category !== category;
+      if (!card.hidden) visibleCount += 1;
+    });
+    filters.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.categoryFilter === category));
+    });
+    grid.classList.toggle('is-filtered', category !== 'all');
+    status.textContent = `Showing ${visibleCount} ${visibleCount === 1 ? 'piece' : 'pieces'}`;
+  }
+
+  const requestedCategory = new URLSearchParams(window.location.search).get('category');
+  const initialCategory = categories.has(requestedCategory) ? requestedCategory : 'all';
+  if (initialCategory !== 'all') grid.classList.add('has-category-choice');
+  showCategory(initialCategory);
+  categoryToolbar.hidden = false;
+
+  filters.forEach((button) => {
+    button.addEventListener('click', () => {
+      const category = button.dataset.categoryFilter;
+      grid.classList.add('has-category-choice');
+      showCategory(category);
+      try {
+        const url = new URL(window.location.href);
+        if (category === 'all') url.searchParams.delete('category');
+        else url.searchParams.set('category', category);
+        url.hash = 'collection';
+        window.history.replaceState(null, '', url);
+      } catch {
+        // Filtering still works when a local file browser blocks history updates.
+      }
+    });
+  });
+}
+
 document.querySelectorAll('[data-product-id] .add-form').forEach((form) => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
