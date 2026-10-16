@@ -14,6 +14,12 @@ Product images in `assets/` are generated design previews based on the brand gra
 
 The home-page coastal video and poster are adapted from [Mixkit's palm-lined beach aerial](https://mixkit.co/free-stock-video/aerial-shot-of-a-beach-next-to-a-forest-of-44365/) under the [Mixkit Stock Video Free License](https://mixkit.co/license/modal/videoFree/). The short, muted loop pauses when it leaves the viewport; reduced-motion and data-saving visitors see the poster instead.
 
+The homepage and Story page use `campaign.css`: a white, image-led layout with a full-width coastal film, a three-piece collection, and long-form brand sections. Scroll reveals respect reduced-motion preferences and all content remains available without JavaScript.
+
+`assets/coastal-path-editorial.webp` is generated editorial imagery, not documentation of a brand trip or a product shoot. It was created with the built-in image generation tool and optimized to WebP. The full prompt is recorded in `assets/coastal-path-prompt.txt`.
+
+The generated tee styling image (`assets/coastal-tee-campaign.webp`) follows the existing tee graphic and remains a design preview. Journal imagery (`assets/journal-music.webp` and `assets/journal-objects.webp`) illustrates upcoming topics. These images are not records of published stories or confirmed product samples. Their prompts are in `assets/generated-prompts.md`.
+
 The public sitemap is `sitemap.xml`; `site-map.html` is the navigable map for visitors. Update canonical URLs and the sitemap if the site moves from its GitHub Pages address to a custom domain.
 
 The main navigation connects Shop (`index.html#collection`), Journal, Story, Archive, and My Picks (`picks.html`). Site map lives in the footer. No contact information is displayed until a real contact is provided.
@@ -27,7 +33,7 @@ The active display name is a **temporary Explore placeholder**, not a final nami
 
 `picks.html` is a browser-only personal list. `order.html` redirects to it, preserving old bookmarks. The existing `explore-bike-order-draft-v1` storage key and internal `order-*` / `data-cart-*` hooks remain for compatibility; do not rename the storage key without a migration. Quantities are limited to 1–99 for each product/size. Nothing is submitted, reserved, or paid for.
 
-The website stays buildless. Deploy the static site files with `assets/`, `brand.js`, `script.js`, `shop.js`, and both stylesheets. `brand.json` and its synchronization tool are only needed when changing the display name. Original PNG artwork is retained; pages serve optimized WebP previews. The favicon reuses the existing orange brand mark.
+The website stays buildless. Deploy the static site files with `assets/`, `brand.js`, `script.js`, `shop.js`, `style.css`, `editorial.css`, and `campaign.css`. `brand.json` and its synchronization tool are only needed when changing the display name. Original PNG artwork is retained; pages serve optimized WebP previews. The favicon reuses the existing orange brand mark.
 
 ## Local QA
 
@@ -38,6 +44,7 @@ With Node, Playwright, and Chrome available, run:
 ```sh
 QA_URL=http://127.0.0.1:8766/ node qa/verify.cjs
 QA_URL=http://127.0.0.1:8766/ node qa/edge-cases.cjs
+QA_URL=http://127.0.0.1:8766/ node qa/campaign.cjs
 node scripts/sync-brand.cjs --check
 ```
 

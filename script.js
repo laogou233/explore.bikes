@@ -84,3 +84,17 @@ if (heroVideo && motionToggle) {
   });
   document.addEventListener('visibilitychange', updateHeroVideo);
 }
+
+const revealElements = document.querySelectorAll('[data-reveal]');
+if (revealElements.length && 'IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('motion-ready');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  revealElements.forEach((element) => revealObserver.observe(element));
+}

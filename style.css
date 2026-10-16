@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-  --paper: #f4f2eb;
+  --paper: #ffffff;
   --white: #ffffff;
-  --ink: #202c27;
-  --muted: #686e64;
-  --line: #d9dbd1;
-  --green: #285442;
+  --ink: #20211f;
+  --muted: #686a66;
+  --line: #dedfdb;
+  --green: #234d40;
   --orange: #e75f38;
   --max: 1240px;
 }
@@ -211,6 +211,9 @@ h1, h2, h3 { line-height: 1.05; letter-spacing: 0; }
 .measurement-list dt { font-weight: 800; }
 .measurement-list dd { margin: 0; color: var(--muted); text-align: right; }
 .detail-back { margin-top: 64px; }
+.detail-lifestyle { margin: 64px 0 0; }
+.detail-lifestyle img { width: 100%; height: auto; }
+.detail-lifestyle figcaption { margin-top: 14px; color: var(--muted); font-size: 11px; line-height: 1.7; }
 
 .page-hero { max-width: var(--max); margin: 0 auto; padding: 90px 24px 64px; border-bottom: 1px solid var(--line); }
 .page-hero h1 { margin-bottom: 22px; font-size: clamp(48px, 6vw, 82px); }
@@ -298,10 +301,10 @@ h1, h2, h3 { line-height: 1.05; letter-spacing: 0; }
 }
 
 /* Shared editorial visual system */
-.site-header { min-height: 80px; background: rgba(244, 242, 235, .96); }
-.brand { letter-spacing: -.5px; font-size: 17px; }
+.site-header { min-height: 80px; background: rgba(255, 255, 255, .98); }
+.brand { letter-spacing: 0; font-size: 17px; }
 .brand-mark { width: 17px; height: 17px; border-radius: 50% 50% 0 50%; transform: rotate(-35deg); }
-.site-nav { font-size: 11px; letter-spacing: .07em; }
+.site-nav { font-size: 12px; letter-spacing: 0; font-weight: 500; }
 .nav-draft { border-left: 1px solid var(--line); padding-left: 26px; }
 .eyebrow { letter-spacing: .13em; font-size: 10px; }
 .hero-video { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 52%; background: #25473e url('assets/coastal-hero-poster.jpg') center / cover no-repeat; }
@@ -351,219 +354,7 @@ h1, h2, h3 { line-height: 1.05; letter-spacing: 0; }
   .site-footer { flex-wrap: wrap; gap: 20px; }
 }
 
-/* Homepage / 01 — Editorial frame and accessible navigation.
-   Scoped to the homepage so product, draft, and site-map pages stay unchanged. */
-.home-page { --home-max: 1320px; --home-gutter: clamp(20px, 4.167vw, 60px); }
-.home-page .home-shell { width: calc(100% - 2 * var(--home-gutter)); max-width: var(--home-max); margin-inline: auto; padding-inline: 0; }
-.home-page .site-header { padding-inline: max(var(--home-gutter), calc((100vw - var(--home-max)) / 2)); }
 .skip-link { position: fixed; top: 12px; left: 20px; z-index: 110; padding: 12px 20px; background: var(--ink); color: var(--paper); transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
 #main-content:focus { outline: none; }
-.home-page .eyebrow { font-size: 10px; font-weight: 500; letter-spacing: .13em; }
 .site-nav a { min-height: 44px; display: inline-flex; align-items: center; }
-.home-page .product-card { animation: none; }
-.home-page .product-media img { transition: none; }
-.home-page .product-media a:hover img, .home-page .product-media a:focus-visible img { transform: none; }
-.home-page .product-media a:focus-visible { outline-offset: -4px; }
-
-/* Homepage / 02 — Brand masthead and coastal film. */
-.home-page .world-hero { padding-block: 44px 0; }
-.home-page .world-kicker { margin-bottom: 26px; color: var(--ink); }
-.home-page .hero-masthead { display: grid; grid-template-columns: 1.45fr 1fr; align-items: end; gap: 5%; margin-bottom: 40px; }
-.home-page .hero-masthead h1 { margin: 0; font-size: clamp(68px, 7.15vw, 112px); font-weight: 600; letter-spacing: -.065em; line-height: .95; white-space: nowrap; }
-.home-page .hero-masthead h1 em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--green); letter-spacing: -.06em; }
-.home-page .hero-world-copy { padding-bottom: 2px; }
-.home-page .world-tagline { margin-bottom: 10px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(24px, 2.1vw, 32px); letter-spacing: -.025em; }
-.home-page .hero-world-copy > p:last-child { margin: 0; font-size: 13px; line-height: 1.8; color: var(--muted); }
-.home-page .hero-window { position: relative; isolation: isolate; aspect-ratio: 2.55; min-height: 360px; background: var(--green); }
-.home-page .hero-window::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(10,24,18,.4), transparent 35%, transparent 70%, rgba(10,24,18,.38)); }
-.home-page .hero-video { object-position: center 52%; }
-.home-page .hero-film-label { position: absolute; top: 26px; left: 28px; z-index: 1; color: #fff; font-size: 9px; letter-spacing: .18em; }
-.home-page .drop-link { position: absolute; bottom: 28px; left: 28px; z-index: 1; display: inline-flex; min-height: 52px; align-items: center; gap: 46px; padding: 0 20px; background: var(--orange); color: #101b15; font-size: 12px; font-weight: 600; }
-.home-page .drop-link span { font-size: 24px; font-weight: 400; }
-.home-page .drop-link:hover { background: var(--paper); }
-.home-page .hero-motion-toggle { width: 44px; height: 44px; right: 28px; bottom: 28px; background: rgba(15,32,25,.75); }
-.home-page .hero-caption { display: flex; justify-content: space-between; gap: 20px; padding-block: 19px; border-bottom: 1px solid var(--line); font-size: 10px; letter-spacing: .09em; }
-.home-page .hero-caption span:last-child { font-family: Georgia, 'Times New Roman', serif; font-size: 16px; font-style: italic; letter-spacing: 0; }
-
-/* Homepage / 03 — Asymmetric Drop 001 lookbook and category states. */
-.home-page .lookbook-section { padding-block: 96px 104px; }
-.home-page .drop-heading { display: flex; justify-content: space-between; align-items: end; gap: 48px; margin-bottom: 30px; }
-.home-page .drop-heading .eyebrow { margin-bottom: 20px; }
-.home-page .drop-heading h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(64px, 6.4vw, 96px); letter-spacing: -.055em; margin: 0; line-height: 1; }
-.home-page .accent-period { color: var(--orange); }
-.home-page .drop-heading > p { margin: 0 0 4px; max-width: 300px; font-size: 13px; line-height: 1.9; color: var(--muted); }
-.home-page .category-toolbar { padding: 0 0 35px; }
-.home-page .category-filters { gap: 22px; }
-.home-page .category-filter { padding: 0; min-height: 44px; border: 0; border-bottom: 1px solid transparent; border-radius: 0; font-size: 11px; background: transparent; }
-.home-page .category-filter[aria-pressed="true"] { background: transparent; color: var(--ink); border-bottom-color: var(--ink); }
-.home-page .category-filter[aria-pressed="true"] [data-category-count] { color: var(--muted); }
-.home-page .category-status { font-size: 10px; font-weight: 400; }
-.home-page .lookbook-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; column-gap: 28px; row-gap: 108px; }
-.home-page .lookbook-piece { min-width: 0; overflow: visible; display: block; grid-row: auto; background: transparent; }
-.home-page .lookbook-piece[hidden] { display: none; }
-.home-page .lookbook-piece--lead { grid-column: 1 / 8; }
-.home-page .lookbook-piece--layer { grid-column: 9 / -1; margin-top: 72px; }
-.home-page .piece-heading { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 14px; font-size: 9px; letter-spacing: .08em; }
-.home-page .piece-heading span:last-child { color: var(--muted); }
-.home-page .lookbook-piece .product-media { border: 0; border-radius: 0; aspect-ratio: 1; }
-.home-page .lookbook-piece .product-media img { width: 100%; height: 100%; object-fit: contain; }
-.home-page .lookbook-piece .preview-label { top: auto; left: 12px; bottom: 12px; font-size: 9px; }
-.home-page .lookbook-piece .product-info { display: block; padding: 24px 0 0; }
-.home-page .lookbook-piece .product-type { font-size: 9px; font-weight: 500; margin-bottom: 10px; }
-.home-page .lookbook-piece h3 { font-size: clamp(24px, 2.3vw, 34px); letter-spacing: -.045em; font-weight: 500; margin-bottom: 12px; }
-.home-page .lookbook-piece .product-info > p:not(.product-type) { max-width: 360px; min-height: 0; margin-bottom: 14px; font-size: 12px; line-height: 1.8; }
-.home-page .lookbook-piece .product-detail-link { min-height: 44px; margin: 0 0 10px; font-size: 10px; letter-spacing: .03em; text-transform: none; }
-.home-page .field-note { margin-bottom: 48px; }
-.home-page .field-note .eyebrow { margin-bottom: 22px; }
-.home-page .field-note-title { font-size: clamp(32px, 3.25vw, 48px); line-height: 1.08; letter-spacing: -.05em; font-weight: 500; margin-bottom: 20px; }
-.home-page .field-note-title em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; color: var(--green); }
-.home-page .field-note > p:last-child { max-width: 280px; margin: 0; font-size: 12px; line-height: 1.9; color: var(--muted); }
-.home-page .lookbook-grid .lookbook-piece--last { grid-column: 3 / -1; display: grid; grid-template-columns: .85fr 1.4fr; column-gap: 56px; align-items: center; }
-.home-page .lookbook-grid .lookbook-piece--last .piece-heading { grid-column: 1 / -1; }
-.home-page .lookbook-grid .lookbook-piece--last .product-media { grid-column: 2; grid-row: 2; }
-.home-page .lookbook-grid .lookbook-piece--last .product-info { grid-column: 1; grid-row: 2; padding: 0; }
-.home-page .lookbook-grid .lookbook-piece--last h3 { max-width: 220px; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(38px, 4vw, 58px); font-weight: 400; }
-.home-page .lookbook-grid.is-filtered { grid-template-columns: minmax(0, 780px); row-gap: 48px; }
-.home-page .lookbook-grid.is-filtered .lookbook-piece { grid-column: 1; grid-row: auto; margin: 0; display: block; }
-.home-page .lookbook-grid.is-filtered .lookbook-piece[hidden] { display: none; }
-.home-page .lookbook-grid.is-filtered .field-note { display: none; }
-.home-page .lookbook-grid.is-filtered .product-info { padding-top: 24px; }
-.home-page .catalog-note { max-width: 640px; margin-top: 56px; font-size: 11px; line-height: 1.8; }
-
-/* Homepage / 04 — Quiet, progressively disclosed save controls. */
-.home-page .piece-save { max-width: 400px; border-top: 1px solid var(--line); }
-.home-page .piece-save summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 48px; list-style: none; cursor: pointer; font-size: 11px; }
-.home-page .piece-save summary::-webkit-details-marker { display: none; }
-.home-page .save-symbol { font-size: 20px; font-weight: 400; line-height: 1; }
-.home-page .piece-save[open] .save-symbol { transform: rotate(45deg); }
-.home-page .piece-save .add-form { padding-top: 8px; border: 0; }
-.home-page .piece-save .product-controls { grid-template-columns: minmax(0, 1fr) auto; }
-.home-page .piece-save select, .home-page .piece-save .action-button { min-height: 44px; }
-.home-page .save-note { margin: 12px 0 16px; color: var(--muted); font-size: 10px; line-height: 1.6; }
-
-/* Homepage / 05 — Our Way brand statement. */
-.home-page .our-way { background: var(--green); color: var(--paper); }
-.home-page .statement-inner { padding-block: 70px 58px; }
-.home-page .our-way .eyebrow { color: var(--paper); margin-bottom: 48px; }
-.home-page .statement-copy { display: grid; grid-template-columns: 1.35fr 1fr; gap: 9%; align-items: end; }
-.home-page .statement-copy h2 { margin: 0; font-family: 'Songti SC', 'Noto Serif CJK SC', serif; font-weight: 400; font-size: clamp(30px, 3vw, 44px); line-height: 1.7; letter-spacing: .015em; }
-.home-page .statement-copy > p { max-width: 410px; margin: 0 0 8px; font-size: 13px; line-height: 1.9; color: #e1e6da; }
-.home-page .statement-signoff { display: flex; align-items: center; gap: .22em; margin: 60px 0 0; padding-top: 28px; border-top: 1px solid rgba(244,242,235,.3); font-size: clamp(38px, 6.2vw, 92px); font-weight: 500; line-height: 1.1; letter-spacing: -.05em; }
-.home-page .statement-signoff em { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; }
-.home-page .statement-signoff > span { margin-left: auto; color: var(--orange); font-size: 1.1em; }
-
-/* Homepage / 06 — Journal teasers; static until stories exist. */
-.home-page .journal-section { padding-block: 96px 104px; }
-.home-page .journal-heading { display: flex; justify-content: space-between; align-items: end; gap: 36px; margin-bottom: 36px; }
-.home-page .journal-heading h2 { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(32px, 3.3vw, 48px); font-weight: 400; letter-spacing: -.045em; }
-.home-page .journal-heading > p { margin: 0; font-size: 12px; color: var(--muted); line-height: 1.8; }
-.home-page .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-.home-page .journal-art { position: relative; isolation: isolate; overflow: hidden; aspect-ratio: 1.6; }
-.home-page .journal-art > span { position: absolute; left: 16px; top: 14px; z-index: 1; font-size: 10px; color: var(--paper); }
-.home-page .journal-art--places { background: var(--green) url('assets/coastal-hero-poster.jpg') center 55% / cover; }
-.home-page .journal-art--places > span { padding: 3px 6px; background: rgba(16,27,21,.7); }
-.home-page .journal-art--music { display: grid; place-items: center; background: #deded3; }
-.home-page .journal-art--music > span, .home-page .journal-art--objects > span { color: var(--ink); }
-.home-page .journal-record { width: 48%; aspect-ratio: 1; border-radius: 50%; background: repeating-radial-gradient(circle, #202c27 0 2px, #354038 3px 4px); display: grid; place-items: center; transform: translate(24%, 13%); }
-.home-page .journal-record::after { content: ''; width: 22%; aspect-ratio: 1; border-radius: 50%; background: var(--orange); border: 5px solid var(--ink); }
-.home-page .journal-art--objects { display: grid; place-items: center; background: #e9b296; }
-.home-page .journal-object { width: 43%; aspect-ratio: 1; border: 22px solid var(--paper); border-radius: 50% 50% 0 0; transform: rotate(-20deg) translate(5%, 9%); box-shadow: 18px 16px 0 rgba(32,44,39,.16); }
-.home-page .journal-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 22px; }
-.home-page .journal-meta h3 { font-size: 19px; font-weight: 500; letter-spacing: -.035em; margin: 0; }
-.home-page .journal-meta > span { color: var(--muted); font-size: 10px; white-space: nowrap; }
-.home-page .journal-teaser > p { color: var(--muted); font-size: 11px; margin: 10px 0 0; }
-.home-page .site-footer { max-width: none; margin-inline: var(--home-gutter); padding-inline: 0; border-top: 1px solid var(--line); }
-
-/* Homepage / 07 — Tablet and mobile are separate editorial compositions. */
-@media (max-width: 1023px) {
-  .home-page .hero-masthead { grid-template-columns: 1fr; gap: 28px; }
-  .home-page .hero-masthead h1 { font-size: 86px; }
-  .home-page .hero-world-copy { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-  .home-page .world-tagline { margin: 0; }
-  .home-page .hero-window { aspect-ratio: 1.9; min-height: 320px; }
-  .home-page .lookbook-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: 22px; row-gap: 80px; }
-  .home-page .lookbook-piece--lead { grid-column: 1 / 8; }
-  .home-page .lookbook-piece--layer { grid-column: 9 / -1; margin-top: 40px; }
-  .home-page .lookbook-grid .lookbook-piece--last { grid-column: 2 / -1; column-gap: 28px; }
-  .home-page .piece-heading { font-size: 8px; }
-  .home-page .piece-heading span:last-child { display: none; }
-  .home-page .field-note-title { font-size: 30px; }
-  .home-page .field-note { margin-bottom: 34px; }
-  .home-page .field-note .eyebrow { font-size: 9px; line-height: 1.8; }
-  .home-page .piece-save .product-controls { grid-template-columns: 1fr; }
-  .home-page .statement-copy { grid-template-columns: 1.2fr 1fr; gap: 5%; }
-  .home-page .statement-copy h2 { font-size: 29px; }
-  .home-page .journal-grid { gap: 20px; }
-  .home-page .journal-meta { display: block; }
-  .home-page .journal-meta > span { display: inline-block; margin-top: 12px; }
-}
-@media (max-width: 600px) {
-  .home-page .site-header { padding-inline: 20px; }
-  .home-page .site-nav a { display: flex; }
-  .home-page .world-hero { padding-top: 30px; }
-  .home-page .world-kicker { font-size: 8px; letter-spacing: .09em; margin-bottom: 25px; }
-  .home-page .hero-masthead { gap: 25px; margin-bottom: 26px; }
-  .home-page .hero-masthead h1 { font-size: clamp(54px, 14.4vw, 82px); }
-  .home-page .hero-world-copy { display: block; }
-  .home-page .world-tagline { margin-bottom: 10px; font-size: 28px; }
-  .home-page .hero-world-copy > p:last-child { max-width: 320px; font-size: 12px; }
-  .home-page .desktop-break { display: none; }
-  .home-page .hero-window { min-height: 0; aspect-ratio: 1.05; }
-  .home-page .hero-video { object-position: 60% center; }
-  .home-page .hero-film-label { top: 18px; left: 18px; font-size: 8px; }
-  .home-page .drop-link { left: 18px; bottom: 18px; min-height: 48px; gap: 25px; padding-inline: 14px; font-size: 11px; }
-  .home-page .hero-motion-toggle { bottom: 20px; right: 18px; }
-  .home-page .hero-caption { align-items: center; padding-block: 17px; font-size: 8px; gap: 12px; letter-spacing: .04em; }
-  .home-page .hero-caption span:last-child { font-size: 13px; }
-  .home-page .lookbook-section { padding-block: 62px 64px; }
-  .home-page .drop-heading { display: block; margin-bottom: 24px; }
-  .home-page .drop-heading h2 { font-size: 68px; }
-  .home-page .drop-heading > p { margin-top: 20px; font-size: 12px; }
-  .home-page .category-toolbar { padding-bottom: 28px; }
-  .home-page .category-filters { gap: 20px; margin: 0; padding: 0; }
-  .home-page .category-status { margin-top: 12px; font-size: 10px; }
-  .home-page .lookbook-grid { grid-template-columns: minmax(0, 1fr); gap: 60px; }
-  .home-page .lookbook-piece--lead, .home-page .lookbook-piece--layer, .home-page .lookbook-grid .lookbook-piece--last { grid-column: 1; margin: 0; display: block; }
-  .home-page .piece-heading { font-size: 8px; }
-  .home-page .piece-heading span:last-child { display: inline; }
-  .home-page .lookbook-piece .product-info { padding-top: 20px; }
-  .home-page .lookbook-piece h3 { font-size: 27px; }
-  .home-page .lookbook-piece .product-info > p:not(.product-type) { max-width: 310px; }
-  .home-page .lookbook-piece--layer .field-note { margin: 0 0 30px; padding: 28px 0 0; border-top: 1px solid var(--line); }
-  .home-page .field-note-title { font-size: 40px; }
-  .home-page .field-note > p:last-child { max-width: 280px; }
-  .home-page .lookbook-piece--layer .product-media, .home-page .lookbook-piece--layer .piece-heading, .home-page .lookbook-piece--layer .product-info { width: 89%; margin-left: auto; }
-  .home-page .lookbook-grid .lookbook-piece--last { padding-top: 24px; border-top: 1px solid var(--line); }
-  .home-page .lookbook-grid .lookbook-piece--last h3 { max-width: none; font-size: 40px; }
-  .home-page .piece-save .product-controls { grid-template-columns: minmax(0, 1fr) auto; }
-  .home-page .lookbook-grid.is-filtered .lookbook-piece > .product-media, .home-page .lookbook-grid.is-filtered .lookbook-piece > .product-info, .home-page .lookbook-grid.is-filtered .piece-heading { width: 100%; margin-left: 0; }
-  .home-page .lookbook-grid.is-filtered .lookbook-piece { border: 0; padding-top: 0; }
-  .home-page .catalog-note { margin-top: 36px; font-size: 10px; }
-  .home-page .statement-inner { padding-block: 42px 36px; }
-  .home-page .our-way .eyebrow { margin-bottom: 30px; }
-  .home-page .statement-copy { grid-template-columns: 1fr; gap: 24px; }
-  .home-page .statement-copy h2 { font-size: clamp(25px, 6.4vw, 36px); }
-  .home-page .statement-copy > p { max-width: 340px; margin: 0; font-size: 12px; }
-  .home-page .statement-signoff { position: relative; display: block; margin-top: 36px; padding-top: 26px; font-size: clamp(39px, 10vw, 60px); }
-  .home-page .statement-signoff em { display: block; }
-  .home-page .statement-signoff > span { position: absolute; bottom: 0; right: 0; font-size: 1.1em; }
-  .home-page .journal-section { padding-block: 62px; }
-  .home-page .journal-heading { display: block; margin-bottom: 28px; }
-  .home-page .journal-heading h2 { max-width: 270px; font-size: 36px; }
-  .home-page .journal-heading > p { margin-top: 20px; }
-  .home-page .journal-grid { grid-template-columns: 1fr; gap: 22px; }
-  .home-page .journal-teaser { display: grid; grid-template-columns: 112px minmax(0, 1fr); column-gap: 20px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
-  .home-page .journal-art { aspect-ratio: 1; grid-row: 1 / 3; }
-  .home-page .journal-art > span { top: 8px; left: 8px; font-size: 8px; }
-  .home-page .journal-record { width: 66%; }
-  .home-page .journal-object { width: 53%; border-width: 13px; box-shadow: 10px 10px 0 rgba(32,44,39,.16); }
-  .home-page .journal-meta { margin-top: 12px; }
-  .home-page .journal-meta h3 { font-size: 19px; line-height: 1.2; }
-  .home-page .journal-meta > span { margin-top: 7px; font-size: 9px; }
-  .home-page .journal-teaser > p { margin: 8px 0 0; font-size: 10px; line-height: 1.6; }
-  .home-page .site-footer { margin-inline: 20px; font-size: 9px; gap: 18px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .home-page *, .home-page *::before, .home-page *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
-}

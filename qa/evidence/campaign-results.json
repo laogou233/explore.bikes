@@ -1,0 +1,223 @@
+{
+  "testedAt": "2026-10-16T12:52:09.323Z",
+  "matrix": [
+    {
+      "file": "index.html",
+      "width": 375,
+      "height": 812,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 375,
+      "height": 812,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 375,
+      "height": 812,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 390,
+      "height": 844,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 390,
+      "height": 844,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 390,
+      "height": 844,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 430,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 430,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 430,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 768,
+      "height": 1024,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 768,
+      "height": 1024,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 768,
+      "height": 1024,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 1280,
+      "height": 720,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 1280,
+      "height": 720,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 1280,
+      "height": 720,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 1440,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 1440,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 1440,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 1728,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 1728,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 1728,
+      "height": 900,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "width": 2560,
+      "height": 1080,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "story.html",
+      "width": 2560,
+      "height": 1080,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    },
+    {
+      "file": "journal.html",
+      "width": 2560,
+      "height": 1080,
+      "images": "decoded",
+      "reveals": "visible",
+      "firstViewport": "passed",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "browserVersion": "154.0.8037.97"
+}

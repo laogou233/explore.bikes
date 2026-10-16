@@ -9,8 +9,9 @@
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preload" as="image" href="assets/coastal-hero-poster.jpg" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="campaign.css">
 </head>
-<body class="home-page">
+<body class="campaign-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="index.html" data-brand-label="{brand} home" aria-label="Explore home">
@@ -30,33 +31,27 @@
   </header>
 
   <main id="main-content" tabindex="-1">
-    <section class="world-hero home-shell" aria-labelledby="lead-title">
-      <p class="eyebrow world-kicker">Independent spirit / Everyday exploration</p>
-      <div class="hero-masthead">
-        <h1 id="lead-title"><span data-brand-name>Explore</span><em>.</em></h1>
-        <div class="hero-world-copy">
-          <p class="world-tagline">Go your own way.</p>
-          <p>Made for ordinary days, unexpected places,<br class="desktop-break"> and wherever you decide to go next.</p>
-        </div>
+    <section class="campaign-hero" aria-labelledby="lead-title">
+      <video class="hero-video" muted loop playsinline preload="none" poster="assets/coastal-hero-poster.jpg" aria-hidden="true">
+        <source src="assets/coastal-hero.mp4" type="video/mp4">
+      </video>
+      <div class="campaign-hero-content campaign-shell">
+        <p class="campaign-kicker">Independent spirit. Everyday exploration.</p>
+        <h1 id="lead-title"><span data-brand-name>Explore</span>.</h1>
+        <p class="campaign-tagline">Go your own way.</p>
+        <a class="hero-collection-link" href="#collection">Discover Coastal <span aria-hidden="true">&#8595;</span></a>
       </div>
-      <div class="hero-window">
-        <video class="hero-video" muted loop playsinline preload="none" poster="assets/coastal-hero-poster.jpg" aria-hidden="true">
-          <source src="assets/coastal-hero.mp4" type="video/mp4">
-        </video>
-        <span class="hero-film-label" aria-hidden="true">A COASTAL STATE OF MIND</span>
-        <a class="drop-link" href="#collection">Explore Drop 001 <span aria-hidden="true">&#8599;</span></a>
-        <button class="hero-motion-toggle" type="button" aria-label="Pause background video" title="Pause background video" hidden><span aria-hidden="true">&#x23F8;</span></button>
-      </div>
-      <div class="hero-caption"><span>DROP 001 / COASTAL</span><span>No fixed destination.</span></div>
+      <button class="hero-motion-toggle" type="button" aria-label="Pause background video" title="Pause background video" hidden><span aria-hidden="true">&#x23F8;</span></button>
     </section>
+    <div class="campaign-caption campaign-shell"><span>DROP 001 / COASTAL</span><span>No fixed destination.</span></div>
 
-    <section id="collection" class="catalog-section lookbook-section home-shell" aria-labelledby="collection-title">
-      <div class="drop-heading">
+    <section id="collection" class="catalog-section campaign-shell" aria-labelledby="collection-title">
+      <div class="collection-heading" data-reveal>
         <div>
-          <p class="eyebrow">01 / DROP 001</p>
-          <h2 id="collection-title">Coastal<span class="accent-period">.</span></h2>
+          <p class="eyebrow">THE COLLECTION / DROP 001</p>
+          <h2 id="collection-title">Coastal</h2>
         </div>
-        <p>A slower pace. A different perspective.<br>Three pieces for the everyday, wherever it takes you.</p>
+        <p>Everyday pieces. An open outlook.<br>Made for wherever the day takes you.</p>
       </div>
 
       <div class="category-toolbar" hidden>
@@ -69,8 +64,8 @@
         <p class="category-status" data-category-status role="status" aria-live="polite">Showing 3 pieces</p>
       </div>
 
-      <div class="product-grid lookbook-grid">
-        <article class="product-card lookbook-piece lookbook-piece--lead" id="coastal-tee" data-product-id="coastal-tee" data-category="tees">
+      <div class="product-grid store-grid">
+        <article class="product-card" id="coastal-tee" data-product-id="coastal-tee" data-category="tees" data-reveal>
           <div class="piece-heading"><span>001 / DROP 01</span><span>THE EVERYDAY PIECE</span></div>
           <div class="product-media media-tee">
             <a href="coastal-tee.html" aria-label="View Coastal Tee details"><img src="assets/coastal-tee-concept.webp" alt="Concept preview of a black graphic tee with white coastal artwork" width="900" height="900" loading="lazy" decoding="async"></a>
@@ -98,12 +93,7 @@
           </div>
         </article>
 
-        <article class="product-card lookbook-piece lookbook-piece--layer" id="coastal-hoodie" data-product-id="coastal-hoodie" data-category="hoodies">
-          <aside class="field-note" aria-label="A note on Coastal">
-            <p class="eyebrow">A note on everyday life</p>
-            <p class="field-note-title">Less planned.<br><em>More possible.</em></p>
-            <p>A familiar layer. An unfamiliar street. Sometimes all you need is a little room to wander.</p>
-          </aside>
+        <article class="product-card" id="coastal-hoodie" data-product-id="coastal-hoodie" data-category="hoodies" data-reveal>
           <div class="piece-heading"><span>002 / DROP 01</span><span>AN EXTRA LAYER</span></div>
           <div class="product-media media-hoodie">
             <a href="coastal-hoodie.html" aria-label="View Coastal Hoodie details"><img src="assets/coastal-hoodie-concept.webp" alt="Concept preview of a gray hoodie with black coastal artwork" width="900" height="900" loading="lazy" decoding="async"></a>
@@ -131,7 +121,7 @@
           </div>
         </article>
 
-        <article class="product-card lookbook-piece lookbook-piece--last" id="freedom-jersey" data-product-id="freedom-jersey" data-category="jerseys">
+        <article class="product-card" id="freedom-jersey" data-product-id="freedom-jersey" data-category="jerseys" data-reveal>
           <div class="piece-heading"><span>003 / DROP 01</span><span>A DIFFERENT PERSPECTIVE</span></div>
           <div class="product-media media-jersey">
             <a href="freedom-jersey.html" aria-label="View Freedom Jersey details"><img src="assets/freedom-jersey-concept.webp" alt="Concept preview of a dark green jersey with a white chest wordmark" width="900" height="900" loading="lazy" decoding="async"></a>
@@ -162,37 +152,54 @@
       <p class="catalog-note">A collection in progress. Images are design previews; prices, availability, materials, and final sizing are still to come.</p>
     </section>
 
-    <section id="about" class="our-way" aria-labelledby="about-title">
-      <div class="home-shell statement-inner">
-        <p class="eyebrow">02 / OUR WAY</p>
-        <div class="statement-copy">
-          <h2 id="about-title" lang="zh-CN">自由自在，<br>向喜欢的方向出发。</h2>
-          <p>We believe the best days leave a little room for the unexpected. A familiar place seen differently. A new song. An afternoon with no plans. We make space for curiosity, personal rhythms, and the things that feel like you. Wherever you find yourself, make it your own.</p>
-        </div>
-        <p class="statement-signoff">GO YOUR <em>OWN WAY.</em><span aria-hidden="true">&#8599;</span></p>
-      </div>
+    <section class="wear-section" aria-labelledby="wear-title">
+      <figure class="wear-feature">
+        <img src="assets/coastal-tee-campaign.webp" alt="Design preview of the black Coastal Tee worn with gray trousers beside the sea" width="1672" height="941" loading="lazy" decoding="async">
+        <figcaption class="wear-caption campaign-shell" data-reveal>
+          <div><p class="eyebrow">COASTAL TEE / DESIGN PREVIEW</p><h2 id="wear-title">Wear the day your way.</h2></div>
+          <a class="text-link" href="coastal-tee.html">Discover the piece <span aria-hidden="true">&#8599;</span></a>
+        </figcaption>
+      </figure>
     </section>
 
-    <section id="journal" class="journal-section home-shell" aria-labelledby="journal-title">
-      <div class="journal-heading">
-        <div><p class="eyebrow">03 / JOURNAL</p><h2 id="journal-title">Outside the collection.</h2></div>
-        <p>A few things that catch our attention.<br>Stories to come.</p>
+    <section id="about" class="brand-section" aria-labelledby="about-title">
+      <div class="brand-statement campaign-shell" data-reveal>
+        <p class="eyebrow">OUR WAY</p>
+        <div>
+          <h2 id="about-title" lang="zh-CN">自由自在，<br>向喜欢的方向出发。</h2>
+          <p>A familiar place seen differently. An afternoon with no plans. We believe in leaving room for curiosity, for unexpected turns, for a day that feels like you.</p>
+          <a class="text-link" href="story.html">Our story <span aria-hidden="true">&#8599;</span></a>
+        </div>
       </div>
-      <div class="journal-grid">
-        <article class="journal-teaser journal-teaser--places">
-          <div class="journal-art journal-art--places" aria-hidden="true"><span>01</span></div>
-          <div class="journal-meta"><h3>Places</h3><span>Coming soon</span></div>
+      <figure class="brand-landscape">
+        <img src="assets/coastal-path-editorial.webp" alt="An open coastal path winding through grass above the sea" width="1672" height="941" loading="lazy" decoding="async">
+        <figcaption class="campaign-shell"><span>A little room to wander.</span><span>Coastal / Visual study</span></figcaption>
+      </figure>
+    </section>
+
+    <section id="journal" class="stories-section campaign-shell" aria-labelledby="journal-title">
+      <div class="collection-heading" data-reveal>
+        <div><p class="eyebrow">JOURNAL</p><h2 id="journal-title">Beyond the everyday.</h2></div>
+        <a class="text-link" href="journal.html">View journal <span aria-hidden="true">&#8599;</span></a>
+      </div>
+      <div class="story-topics">
+        <article class="story-topic" data-reveal>
+          <img class="topic-image" src="assets/coastal-path-editorial.webp" alt="Coastal path winding above the open sea" width="1672" height="941" loading="lazy" decoding="async">
+          <div class="topic-heading"><h3>Places</h3><span class="topic-number">01</span></div>
           <p>A change of scenery.</p>
+          <span class="topic-status">Coming soon</span>
         </article>
-        <article class="journal-teaser journal-teaser--music">
-          <div class="journal-art journal-art--music" aria-hidden="true"><span>02</span><div class="journal-record"></div></div>
-          <div class="journal-meta"><h3>Music</h3><span>Coming soon</span></div>
+        <article class="story-topic" data-reveal>
+          <img class="topic-image" src="assets/journal-music.webp" alt="A vinyl record playing on a silver turntable by an open window" width="1448" height="1086" loading="lazy" decoding="async">
+          <div class="topic-heading"><h3>Music</h3><span class="topic-number">02</span></div>
           <p>Something to keep on repeat.</p>
+          <span class="topic-status">Coming soon</span>
         </article>
-        <article class="journal-teaser journal-teaser--objects">
-          <div class="journal-art journal-art--objects" aria-hidden="true"><span>03</span><div class="journal-object"></div></div>
-          <div class="journal-meta"><h3>Design / Objects</h3><span>Coming soon</span></div>
+        <article class="story-topic" data-reveal>
+          <img class="topic-image" src="assets/journal-objects.webp" alt="A silver camera, orange notebook and small pebble on a window ledge" width="1448" height="1086" loading="lazy" decoding="async">
+          <div class="topic-heading"><h3>Design / Objects</h3><span class="topic-number">03</span></div>
           <p>Everyday things, another way.</p>
+          <span class="topic-status">Coming soon</span>
         </article>
       </div>
     </section>
@@ -211,7 +218,7 @@
     </div>
     <p>&copy; 2026</p>
   </footer>
-  <script src="script.js?v=89db124c23"></script>
+  <script src="script.js"></script>
   <script src="shop.js"></script>
 </body>
 </html>

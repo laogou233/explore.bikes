@@ -1,0 +1,5 @@
+Tool: built-in image_gen
+Asset: coastal-path-editorial.webp (optimized from the generated PNG)
+Purpose: original editorial imagery, not a real brand trip or product shoot.
+
+Use case: photorealistic-natural. Asset type: wide editorial photograph for an independent everyday clothing brand's story page, landscape 16:9. Create a quiet, believable coastal scene: a narrow gray concrete footpath curves along a rugged green shoreline toward the open sea, grasses move in the wind, a few pale rocks, horizon clearly visible. Eye-level documentary travel photography, bright soft daylight after passing clouds, subtle sea green and blue, natural grain and lifelike texture, open composition, crisp detail. The mood is freedom, curiosity and a day without a fixed plan. No people, clothing, products, buildings, vehicles, logos, typography, UI, watermarks, dramatic sunset or exaggerated cinematic color grading. It should feel like an ordinary real place you might discover on a walk, not a luxury resort or a stock advertisement.
