@@ -1,17 +1,17 @@
 const PRODUCTS = {
   'coastal-tee': {
-    name: 'Coastal Graphic Tee',
-    image: 'assets/coastal-tee-concept.png',
+    name: 'Coastal Tee',
+    image: 'assets/coastal-tee-concept.webp',
     sizes: ['Not sure', 'S', 'M', 'L', 'XL', 'XXL']
   },
   'coastal-hoodie': {
-    name: 'Coastal Pullover',
-    image: 'assets/coastal-hoodie-concept.png',
+    name: 'Coastal Hoodie',
+    image: 'assets/coastal-hoodie-concept.webp',
     sizes: ['Not sure', 'S', 'M', 'L', 'XL', 'XXL']
   },
   'freedom-jersey': {
     name: 'Freedom Jersey',
-    image: 'assets/freedom-jersey-concept.png',
+    image: 'assets/freedom-jersey-concept.webp',
     sizes: ['Not sure', 'XS', 'S', 'M', 'L', 'XL']
   }
 };
@@ -22,11 +22,16 @@ function readCart() {
   try {
     const saved = JSON.parse(localStorage.getItem(CART_KEY) || '[]');
     if (!Array.isArray(saved)) return [];
-    return saved.filter((item) =>
-      item && Object.hasOwn(PRODUCTS, item.id) &&
-      PRODUCTS[item.id].sizes.includes(item.size) &&
-      Number.isInteger(item.quantity) && item.quantity >= 1 && item.quantity <= 99
-    );
+    const cart = [];
+    saved.forEach((item) => {
+      if (!item || !Object.hasOwn(PRODUCTS, item.id) ||
+        !PRODUCTS[item.id].sizes.includes(item.size) ||
+        !Number.isInteger(item.quantity) || item.quantity < 1 || item.quantity > 99) return;
+      const existing = cart.find((piece) => piece.id === item.id && piece.size === item.size);
+      if (existing) existing.quantity = Math.min(99, existing.quantity + item.quantity);
+      else cart.push({ id: item.id, size: item.size, quantity: item.quantity });
+    });
+    return cart;
   } catch {
     return [];
   }
@@ -50,8 +55,8 @@ function updateCartCount(cart = readCart()) {
 }
 
 let toastTimeout;
+const toast = document.querySelector('.toast');
 function showToast(message) {
-  const toast = document.querySelector('.toast');
   if (!toast) return;
   toast.textContent = message;
   toast.hidden = false;
@@ -119,7 +124,7 @@ document.querySelectorAll('[data-product-id] .add-form').forEach((form) => {
     const id = card.dataset.productId;
     const size = form.elements.size.value;
     const quantity = Number(form.elements.quantity?.value || 1);
-    if (!PRODUCTS[id]?.sizes.includes(size)) return;
+    if (!Object.hasOwn(PRODUCTS, id) || !PRODUCTS[id].sizes.includes(size)) return;
     if (!Number.isInteger(quantity) || quantity < 1 || quantity > 99) return;
 
     const cart = readCart();
@@ -135,10 +140,10 @@ document.querySelectorAll('[data-product-id] .add-form').forEach((form) => {
     }
 
     if (saveCart(cart)) {
-      showToast(`${PRODUCTS[id].name} added to your draft.`);
+      showToast(`${PRODUCTS[id].name} saved to your picks.`);
       form.reset();
     } else {
-      showToast('This browser could not save your draft. Please check storage settings.');
+      showToast('This browser could not save your picks. Please check storage settings.');
     }
   });
 });
@@ -146,10 +151,11 @@ document.querySelectorAll('[data-product-id] .add-form').forEach((form) => {
 document.querySelectorAll('.detail-gallery').forEach((gallery) => {
   const stage = gallery.querySelector('.detail-stage');
   const caption = gallery.querySelector('[data-detail-caption]');
-  gallery.querySelectorAll('.detail-view-button').forEach((button) => {
+  const viewButtons = gallery.querySelectorAll('.detail-view-button');
+  viewButtons.forEach((button) => {
     button.addEventListener('click', () => {
       stage.dataset.view = button.dataset.view;
-      gallery.querySelectorAll('.detail-view-button').forEach((choice) => {
+      viewButtons.forEach((choice) => {
         choice.setAttribute('aria-pressed', String(choice === button));
       });
       caption.textContent = button.dataset.view === 'front'
@@ -160,17 +166,26 @@ document.querySelectorAll('.detail-gallery').forEach((gallery) => {
 });
 
 const orderItems = document.getElementById('order-items');
+const orderContent = document.getElementById('order-content');
+const emptyOrder = document.getElementById('empty-order');
+const itemCount = document.querySelector('[data-item-count]');
+const summaryCount = document.querySelector('[data-summary-count]');
+const copyStatus = document.getElementById('copy-status');
+const copySummary = document.getElementById('copy-summary');
 
 function createOrderRow(item, index) {
   const product = PRODUCTS[item.id];
   const row = document.createElement('article');
   row.className = 'order-row';
+  row.dataset.pickKey = JSON.stringify([item.id, item.size]);
 
   const image = document.createElement('img');
   image.src = product.image;
   image.alt = `${product.name} design preview`;
   image.width = 160;
   image.height = 160;
+  image.loading = 'lazy';
+  image.decoding = 'async';
   const imageLink = document.createElement('a');
   imageLink.href = `${item.id}.html`;
   imageLink.setAttribute('aria-label', `View ${product.name} details`);
@@ -221,17 +236,34 @@ function createOrderRow(item, index) {
   return row;
 }
 
-function renderOrder() {
+function renderOrder(focusTarget) {
   if (!orderItems) return;
+  const activeButton = document.activeElement?.closest('button[data-action]');
+  if (!focusTarget && activeButton && orderItems.contains(activeButton)) {
+    focusTarget = {
+      key: activeButton.closest('.order-row').dataset.pickKey,
+      index: Number(activeButton.dataset.index),
+      action: activeButton.dataset.action
+    };
+  }
   const cart = readCart();
   const count = cart.reduce((total, item) => total + item.quantity, 0);
   orderItems.replaceChildren(...cart.map(createOrderRow));
-  document.getElementById('order-content').hidden = cart.length === 0;
-  document.getElementById('empty-order').hidden = cart.length !== 0;
-  document.querySelector('[data-item-count]').textContent = `${count} ${count === 1 ? 'item' : 'items'}`;
-  document.querySelector('[data-summary-count]').textContent = String(count);
-  document.getElementById('copy-status').textContent = '';
+  orderContent.hidden = cart.length === 0;
+  emptyOrder.hidden = cart.length !== 0;
+  itemCount.textContent = `${count} ${count === 1 ? 'piece' : 'pieces'}`;
+  summaryCount.textContent = String(count);
+  copyStatus.textContent = '';
   updateCartCount(cart);
+  if (focusTarget) {
+    const rows = [...orderItems.children];
+    const row = rows.find((candidate) => candidate.dataset.pickKey === focusTarget.key) ||
+      rows[Math.min(focusTarget.index, rows.length - 1)];
+    const preferred = row?.querySelector(`[data-action="${focusTarget.action}"]`);
+    const nextFocus = preferred && !preferred.disabled ? preferred :
+      row?.querySelector('button[data-action]:not(:disabled)') || emptyOrder.querySelector('a');
+    nextFocus?.focus();
+  }
 }
 
 if (orderItems) {
@@ -239,35 +271,38 @@ if (orderItems) {
     const button = event.target.closest('button[data-action]');
     if (!button) return;
     const cart = readCart();
-    const index = Number(button.dataset.index);
-    if (!Number.isInteger(index) || !cart[index]) return;
+    const pickKey = button.closest('.order-row').dataset.pickKey;
+    const index = cart.findIndex((item) => JSON.stringify([item.id, item.size]) === pickKey);
+    if (index < 0) { renderOrder(); return; }
+    const focusTarget = { key: button.closest('.order-row').dataset.pickKey, index, action: button.dataset.action };
     if (button.dataset.action === 'remove') cart.splice(index, 1);
     if (button.dataset.action === 'decrease') cart[index].quantity = Math.max(1, cart[index].quantity - 1);
     if (button.dataset.action === 'increase') cart[index].quantity = Math.min(99, cart[index].quantity + 1);
-    if (saveCart(cart)) renderOrder();
+    if (saveCart(cart)) renderOrder(focusTarget);
+    else showToast('This browser could not update your picks. Please check storage settings.');
   });
 
-  document.getElementById('copy-summary').addEventListener('click', async () => {
+  copySummary.addEventListener('click', async () => {
     const cart = readCart();
-    const lines = ['Explore Bike design preview list', 'No order has been submitted.', ''];
+    const lines = [`${window.SITE_BRAND?.name || 'Explore'} — My Picks`, 'Saved in this browser only.', 'No order has been submitted.', ''];
     cart.forEach((item, index) => {
       lines.push(`${index + 1}. ${PRODUCTS[item.id].name} | Preferred size: ${item.size} | Quantity: ${item.quantity}`);
     });
     lines.push('', 'Prices, availability, and final specifications are not confirmed.');
-    const status = document.getElementById('copy-status');
     try {
       await navigator.clipboard.writeText(lines.join('\n'));
-      status.textContent = 'Summary copied. Nothing was sent.';
+      copyStatus.textContent = 'Summary copied. Nothing was sent.';
     } catch {
-      status.textContent = 'Could not copy the summary in this browser.';
+      copyStatus.textContent = 'Could not copy the summary in this browser.';
     }
   });
 
   renderOrder();
 }
 
-window.addEventListener('storage', () => {
-  updateCartCount();
-  renderOrder();
+window.addEventListener('storage', (event) => {
+  if (event.key !== CART_KEY && event.key !== null) return;
+  if (orderItems) renderOrder();
+  else updateCartCount();
 });
-updateCartCount();
+if (!orderItems) updateCartCount();

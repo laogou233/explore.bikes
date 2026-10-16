@@ -1,46 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" class="site-loading">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found - Explore Bike</title>
+  <title data-brand-template="Page Not Found - {brand}">Page Not Found - Explore</title>
+  <meta name="description" content="This page could not be found. Return to the collection or explore our story.">
   <meta name="robots" content="noindex">
-  <link rel="icon" type="image/png" href="1000016929.png">
-  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="/explore.bikes/assets/favicon.svg">
+  <link rel="stylesheet" href="/explore.bikes/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Explore Bike home">
+    <a class="brand" href="/explore.bikes/index.html" data-brand-label="{brand} home" aria-label="Explore home">
       <span class="brand-mark"></span>
-      <span>Explore Bike</span>
+      <span data-brand-name>Explore</span>
     </a>
-    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+    <button class="menu-button" aria-controls="main-navigation" type="button" aria-label="Open menu" aria-expanded="false">
       <span></span>
       <span></span>
     </button>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="index.html#collection">Collection</a>
-      <a href="site-map.html">Site map</a>
-      <a class="nav-draft" href="order.html">Order draft <span data-cart-count>0</span></a>
+    <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="/explore.bikes/index.html#collection">SHOP</a>
+      <a href="/explore.bikes/journal.html">JOURNAL</a>
+      <a href="/explore.bikes/story.html">STORY</a>
+      <a href="/explore.bikes/archive.html">ARCHIVE</a>
+      <a class="nav-draft" href="/explore.bikes/picks.html">My Picks <span data-cart-count>0</span></a>
     </nav>
   </header>
 
-  <main class="page-hero error-page">
+  <main class="page-hero error-page" id="main-content" tabindex="-1">
     <p class="eyebrow">Page not found</p>
     <h1>404</h1>
-    <p>This page is not available. Head back to Explore Bike or use the site map to find what you need.</p>
+    <p>This page is not available. Head back to <span data-brand-name>Explore</span> or browse the collection to find your next piece.</p>
     <div class="hero-actions">
-      <a class="button button-primary" href="index.html">Home</a>
-      <a class="button button-secondary" href="site-map.html">Site map</a>
+      <a class="button button-primary" href="/explore.bikes/index.html">Home</a>
+      <a class="button button-secondary" href="/explore.bikes/index.html#collection">Shop</a>
     </div>
   </main>
 
   <footer class="site-footer">
-    <p>Explore Bike</p>
-    <div><a href="site-map.html">Site map</a><a href="order.html">Order draft</a></div>
+    <p><span data-brand-name>Explore</span></p>
+    <div role="navigation" aria-label="Footer navigation">
+      <a href="/explore.bikes/index.html#collection">Shop</a>
+      <a href="/explore.bikes/journal.html">Journal</a>
+      <a href="/explore.bikes/story.html">Story</a>
+      <a href="/explore.bikes/archive.html">Archive</a>
+      <a href="/explore.bikes/site-map.html">Site map</a>
+    </div>
     <p>&copy; 2026</p>
   </footer>
-  <script src="script.js"></script>
-  <script src="shop.js"></script>
+  <script src="/explore.bikes/brand.js"></script>
+  <script src="/explore.bikes/script.js"></script>
+  <script src="/explore.bikes/shop.js"></script>
 </body>
 </html>

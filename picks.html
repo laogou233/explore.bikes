@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-brand-template="My Picks - {brand}">My Picks - Explore</title>
+  <meta data-brand-template="Review your saved {brand} clothing selections before final details and availability are confirmed." name="description" content="Review your saved Explore clothing selections before final details and availability are confirmed.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://laogou233.github.io/explore.bikes/picks.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" data-brand-label="{brand} home" aria-label="Explore home">
+      <span class="brand-mark"></span>
+      <span data-brand-name>Explore</span>
+    </a>
+    <button class="menu-button" aria-controls="main-navigation" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="index.html#collection">SHOP</a>
+      <a href="journal.html">JOURNAL</a>
+      <a href="story.html">STORY</a>
+      <a href="archive.html">ARCHIVE</a>
+      <a class="nav-draft" href="picks.html" aria-current="page">My Picks <span data-cart-count>0</span></a>
+    </nav>
+  </header>
+
+  <main class="order-main" id="main-content" tabindex="-1">
+    <div class="order-heading">
+      <p class="eyebrow"><span data-brand-name>Explore</span> / Design preview</p>
+      <h1>My Picks</h1>
+      <p>Saved in this browser only.</p>
+    </div>
+
+    <div id="order-content" class="order-layout" hidden>
+      <section aria-labelledby="items-title">
+        <div class="order-section-heading">
+          <h2 id="items-title">Saved pieces</h2>
+          <span data-item-count role="status" aria-live="polite">0 pieces</span>
+        </div>
+        <div id="order-items"></div>
+      </section>
+
+      <aside class="order-summary" aria-labelledby="summary-title">
+        <p class="eyebrow">Review / 01</p>
+        <h2 id="summary-title">Your picks</h2>
+        <div class="summary-line"><span>Pieces</span><strong data-summary-count>0</strong></div>
+        <div class="summary-line"><span>Prices</span><strong>To be confirmed</strong></div>
+        <p>These are design previews, not an order. Copy the list for your records; nothing is submitted or paid for.</p>
+        <button id="copy-summary" class="action-button" type="button">Copy summary</button>
+        <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+      </aside>
+    </div>
+
+    <div id="empty-order" class="empty-order" hidden>
+      <h2>Your picks are empty.</h2>
+      <p>Explore the collection and save the pieces you like.</p>
+      <a class="action-button" href="index.html#collection">View collection</a>
+    </div>
+    <noscript><p>Enable JavaScript to view and save your picks in this browser.</p></noscript>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite" hidden></div>
+  <footer class="site-footer">
+    <p><span data-brand-name>Explore</span></p>
+    <div role="navigation" aria-label="Footer navigation">
+      <a href="index.html#collection">Shop</a>
+      <a href="journal.html">Journal</a>
+      <a href="story.html">Story</a>
+      <a href="archive.html">Archive</a>
+      <a href="site-map.html">Site map</a>
+    </div>
+    <p>&copy; 2026</p>
+  </footer>
+  <script src="brand.js"></script>
+  <script src="script.js"></script>
+  <script src="shop.js"></script>
+</body>
+</html>

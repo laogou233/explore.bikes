@@ -1,0 +1,27 @@
+{
+  "testedAt": "2026-10-16T12:26:02.960Z",
+  "checks": [
+    "Invalid form product rejected: __proto__",
+    "Invalid form product rejected: constructor",
+    "Invalid form product rejected: unknown",
+    "Invalid form size rejected",
+    "Invalid form quantity rejected: 0",
+    "Invalid form quantity rejected: 100",
+    "Invalid form quantity rejected: 1.5",
+    "Stale row does not remove another product",
+    "Remove shifts focus to next saved row",
+    "Saving failure toast",
+    "Nested missing URL serves 404 status",
+    "404 CSS and scripts resolve",
+    "404 skip link receives first focus",
+    "404 skip stays on missing route and focuses main",
+    "Mobile menu navigates and closes",
+    "Resize has no stale menu state",
+    "Resize back collapses menu",
+    "Enabling reduced motion pauses active video",
+    "Enabling saveData pauses active video",
+    "Hidden document pauses video",
+    "Video failure keeps poster and hides control"
+  ],
+  "errors": []
+}

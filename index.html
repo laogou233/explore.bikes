@@ -1,154 +1,217 @@
 <!DOCTYPE html>
-<html lang="en" class="site-loading">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Bike - Cycling Apparel Concepts</title>
-  <meta name="description" content="Explore Bike apparel concepts for the ride and everything after: tees, hoodies, and cycling jerseys inspired by the freedom to explore.">
+  <title data-brand-template="{brand} - Independent Everyday Clothing">Explore - Independent Everyday Clothing</title>
+  <meta data-brand-template="{brand} is an independent clothing brand shaped by freedom, everyday culture, and the places still waiting to be found." name="description" content="Explore is an independent clothing brand shaped by freedom, everyday culture, and the places still waiting to be found.">
   <link rel="canonical" href="https://laogou233.github.io/explore.bikes/">
-  <link rel="icon" type="image/png" href="1000016929.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/coastal-hero-poster.jpg" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="home-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Explore Bike home">
+    <a class="brand" href="index.html" data-brand-label="{brand} home" aria-label="Explore home">
       <span class="brand-mark"></span>
-      <span>Explore Bike</span>
+      <span data-brand-name>Explore</span>
     </a>
-    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+    <button class="menu-button" aria-controls="main-navigation" type="button" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span>
     </button>
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="#collection">Collection</a>
-      <a href="#about">About</a>
-      <a href="site-map.html">Site map</a>
-      <a class="nav-draft" href="order.html">Order draft <span data-cart-count>0</span></a>
+    <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
+      <a href="index.html#collection">SHOP</a>
+      <a href="journal.html">JOURNAL</a>
+      <a href="story.html">STORY</a>
+      <a href="archive.html">ARCHIVE</a>
+      <a class="nav-draft" href="picks.html">My Picks <span data-cart-count>0</span></a>
     </nav>
   </header>
 
-  <main>
-    <section class="shop-lead" aria-labelledby="lead-title">
-      <div>
-        <p class="eyebrow">Explore Bike / Concept collection</p>
-        <h1 id="lead-title"><span class="hero-line">Wear the ride.</span> <span class="hero-line">Keep exploring.</span></h1>
+  <main id="main-content" tabindex="-1">
+    <section class="world-hero home-shell" aria-labelledby="lead-title">
+      <p class="eyebrow world-kicker">Independent spirit / Everyday exploration</p>
+      <div class="hero-masthead">
+        <h1 id="lead-title"><span data-brand-name>Explore</span><em>.</em></h1>
+        <div class="hero-world-copy">
+          <p class="world-tagline">Go your own way.</p>
+          <p>Made for ordinary days, unexpected places,<br class="desktop-break"> and wherever you decide to go next.</p>
+        </div>
       </div>
-      <div class="shop-lead-side">
-        <p>Graphic clothing for riders, from everyday layers to the miles that matter.</p>
-        <a class="text-link" href="#collection">Explore the collection <span aria-hidden="true">&#8599;</span></a>
+      <div class="hero-window">
+        <video class="hero-video" muted loop playsinline preload="none" poster="assets/coastal-hero-poster.jpg" aria-hidden="true">
+          <source src="assets/coastal-hero.mp4" type="video/mp4">
+        </video>
+        <span class="hero-film-label" aria-hidden="true">A COASTAL STATE OF MIND</span>
+        <a class="drop-link" href="#collection">Explore Drop 001 <span aria-hidden="true">&#8599;</span></a>
+        <button class="hero-motion-toggle" type="button" aria-label="Pause background video" title="Pause background video" hidden><span aria-hidden="true">&#x23F8;</span></button>
       </div>
+      <div class="hero-caption"><span>DROP 001 / COASTAL</span><span>No fixed destination.</span></div>
     </section>
 
-    <section id="collection" class="catalog-section" aria-labelledby="collection-title">
-      <div class="section-topline">
+    <section id="collection" class="catalog-section lookbook-section home-shell" aria-labelledby="collection-title">
+      <div class="drop-heading">
         <div>
-          <p class="eyebrow">The collection / 01</p>
-          <h2 id="collection-title">Designed for movement.</h2>
+          <p class="eyebrow">01 / DROP 001</p>
+          <h2 id="collection-title">Coastal<span class="accent-period">.</span></h2>
         </div>
-        <p>Design previews. Final details, prices, and availability are not confirmed.</p>
+        <p>A slower pace. A different perspective.<br>Three pieces for the everyday, wherever it takes you.</p>
       </div>
 
       <div class="category-toolbar" hidden>
         <div class="category-filters" role="group" aria-label="Filter apparel by category">
           <button class="category-filter" type="button" data-category-filter="all" aria-pressed="true">All <span data-category-count>03</span></button>
-          <button class="category-filter" type="button" data-category-filter="tees" aria-pressed="false">T-shirts <span data-category-count>01</span></button>
+          <button class="category-filter" type="button" data-category-filter="tees" aria-pressed="false">Tees <span data-category-count>01</span></button>
           <button class="category-filter" type="button" data-category-filter="hoodies" aria-pressed="false">Hoodies <span data-category-count>01</span></button>
           <button class="category-filter" type="button" data-category-filter="jerseys" aria-pressed="false">Jerseys <span data-category-count>01</span></button>
         </div>
         <p class="category-status" data-category-status role="status" aria-live="polite">Showing 3 pieces</p>
       </div>
 
-      <div class="product-grid">
-        <article class="product-card" id="coastal-tee" data-product-id="coastal-tee" data-category="tees">
+      <div class="product-grid lookbook-grid">
+        <article class="product-card lookbook-piece lookbook-piece--lead" id="coastal-tee" data-product-id="coastal-tee" data-category="tees">
+          <div class="piece-heading"><span>001 / DROP 01</span><span>THE EVERYDAY PIECE</span></div>
           <div class="product-media media-tee">
-            <a href="coastal-tee.html" aria-label="View Coastal Graphic Tee details"><img src="assets/coastal-tee-concept.png" alt="Concept preview of a black Explore Bike graphic T-shirt" width="900" height="900"></a>
+            <a href="coastal-tee.html" aria-label="View Coastal Tee details"><img src="assets/coastal-tee-concept.webp" alt="Concept preview of a black graphic tee with white coastal artwork" width="900" height="900" loading="lazy" decoding="async"></a>
             <span class="preview-label">Design preview</span>
           </div>
           <div class="product-info">
-            <p class="product-type">Everyday / Tee</p>
-            <h3><a href="coastal-tee.html">Coastal Graphic Tee</a></h3>
-            <p>A black tee concept with the coastal ride illustration in white.</p>
-            <a class="product-detail-link" href="coastal-tee.html">View details <span aria-hidden="true">&#8599;</span></a>
-            <form class="add-form">
+            <p class="product-type">Everyday / 001</p>
+            <h3><a href="coastal-tee.html">Coastal Tee</a></h3>
+            <p>A black everyday tee with the Coastal graphic in white.</p>
+            <a class="product-detail-link" href="coastal-tee.html">Discover the piece <span aria-hidden="true">&#8599;</span></a>
+            <details class="piece-save">
+              <summary>Save <span class="save-symbol" aria-hidden="true">+</span></summary>
+              <form class="add-form">
               <label for="tee-size">Preferred size</label>
               <div class="product-controls">
                 <select id="tee-size" name="size" required>
                   <option value="">Select size</option>
                   <option>Not sure</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
                 </select>
-                <button class="action-button" type="submit">Add to draft</button>
+                <button class="action-button" type="submit">Save</button>
               </div>
-            </form>
+              </form>
+              <p class="save-note">Saved in this browser only. This is a personal list, not an order.</p>
+            </details>
           </div>
         </article>
 
-        <article class="product-card" id="coastal-hoodie" data-product-id="coastal-hoodie" data-category="hoodies">
+        <article class="product-card lookbook-piece lookbook-piece--layer" id="coastal-hoodie" data-product-id="coastal-hoodie" data-category="hoodies">
+          <aside class="field-note" aria-label="A note on Coastal">
+            <p class="eyebrow">A note on everyday life</p>
+            <p class="field-note-title">Less planned.<br><em>More possible.</em></p>
+            <p>A familiar layer. An unfamiliar street. Sometimes all you need is a little room to wander.</p>
+          </aside>
+          <div class="piece-heading"><span>002 / DROP 01</span><span>AN EXTRA LAYER</span></div>
           <div class="product-media media-hoodie">
-            <a href="coastal-hoodie.html" aria-label="View Coastal Pullover details"><img src="assets/coastal-hoodie-concept.png" alt="Concept preview of a gray Explore Bike pullover hoodie" width="900" height="900" loading="lazy"></a>
+            <a href="coastal-hoodie.html" aria-label="View Coastal Hoodie details"><img src="assets/coastal-hoodie-concept.webp" alt="Concept preview of a gray hoodie with black coastal artwork" width="900" height="900" loading="lazy" decoding="async"></a>
             <span class="preview-label">Design preview</span>
           </div>
           <div class="product-info">
-            <p class="product-type">Layer / Hoodie</p>
-            <h3><a href="coastal-hoodie.html">Coastal Pullover</a></h3>
-            <p>A gray pullover concept with the ride graphic across the front.</p>
-            <a class="product-detail-link" href="coastal-hoodie.html">View details <span aria-hidden="true">&#8599;</span></a>
-            <form class="add-form">
+            <p class="product-type">Layers / 002</p>
+            <h3><a href="coastal-hoodie.html">Coastal Hoodie</a></h3>
+            <p>A gray hoodie with the Coastal graphic across the front.</p>
+            <a class="product-detail-link" href="coastal-hoodie.html">Discover the piece <span aria-hidden="true">&#8599;</span></a>
+            <details class="piece-save">
+              <summary>Save <span class="save-symbol" aria-hidden="true">+</span></summary>
+              <form class="add-form">
               <label for="hoodie-size">Preferred size</label>
               <div class="product-controls">
                 <select id="hoodie-size" name="size" required>
                   <option value="">Select size</option>
                   <option>Not sure</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
                 </select>
-                <button class="action-button" type="submit">Add to draft</button>
+                <button class="action-button" type="submit">Save</button>
               </div>
-            </form>
+              </form>
+              <p class="save-note">Saved in this browser only. This is a personal list, not an order.</p>
+            </details>
           </div>
         </article>
 
-        <article class="product-card" id="freedom-jersey" data-product-id="freedom-jersey" data-category="jerseys">
+        <article class="product-card lookbook-piece lookbook-piece--last" id="freedom-jersey" data-product-id="freedom-jersey" data-category="jerseys">
+          <div class="piece-heading"><span>003 / DROP 01</span><span>A DIFFERENT PERSPECTIVE</span></div>
           <div class="product-media media-jersey">
-            <a href="freedom-jersey.html" aria-label="View Freedom Jersey details"><img src="assets/freedom-jersey-concept.png" alt="Concept preview of a green Freedom Explore cycling jersey" width="900" height="900" loading="lazy"></a>
+            <a href="freedom-jersey.html" aria-label="View Freedom Jersey details"><img src="assets/freedom-jersey-concept.webp" alt="Concept preview of a dark green jersey with a white chest wordmark" width="900" height="900" loading="lazy" decoding="async"></a>
             <span class="preview-label">Design preview</span>
           </div>
           <div class="product-info">
-            <p class="product-type">On-bike / Jersey</p>
+            <p class="product-type">Everyday / Jersey</p>
             <h3><a href="freedom-jersey.html">Freedom Jersey</a></h3>
-            <p>A clean riding silhouette with a small script mark at the chest.</p>
-            <a class="product-detail-link" href="freedom-jersey.html">View details <span aria-hidden="true">&#8599;</span></a>
-            <form class="add-form">
+            <p>A clean dark green layer with a small white wordmark at the chest.</p>
+            <a class="product-detail-link" href="freedom-jersey.html">Discover the piece <span aria-hidden="true">&#8599;</span></a>
+            <details class="piece-save">
+              <summary>Save <span class="save-symbol" aria-hidden="true">+</span></summary>
+              <form class="add-form">
               <label for="jersey-size">Preferred size</label>
               <div class="product-controls">
                 <select id="jersey-size" name="size" required>
                   <option value="">Select size</option>
                   <option>Not sure</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option>
                 </select>
-                <button class="action-button" type="submit">Add to draft</button>
+                <button class="action-button" type="submit">Save</button>
               </div>
-            </form>
+              </form>
+              <p class="save-note">Saved in this browser only. This is a personal list, not an order.</p>
+            </details>
           </div>
         </article>
       </div>
-      <p class="catalog-note">Mockups show design direction only. Garment fit, fabric, print placement, and available sizes may change.</p>
+      <p class="catalog-note">A collection in progress. Images are design previews; prices, availability, materials, and final sizing are still to come.</p>
     </section>
 
-    <section id="about" class="brand-band" aria-labelledby="about-title">
-      <div class="brand-band-inner">
-        <div>
-          <p class="eyebrow">Our philosophy / 02</p>
-          <h2 id="about-title" lang="zh-CN">自由自在，向喜欢的方向出发。</h2>
-          <p>Freedom means choosing your own pace. Take the longer road, stop for the view, or ride with no destination in mind. Explore Bike brings that easygoing spirit into clothing for the ride and the rest of the day.</p>
+    <section id="about" class="our-way" aria-labelledby="about-title">
+      <div class="home-shell statement-inner">
+        <p class="eyebrow">02 / OUR WAY</p>
+        <div class="statement-copy">
+          <h2 id="about-title" lang="zh-CN">自由自在，<br>向喜欢的方向出发。</h2>
+          <p>We believe the best days leave a little room for the unexpected. A familiar place seen differently. A new song. An afternoon with no plans. We make space for curiosity, personal rhythms, and the things that feel like you. Wherever you find yourself, make it your own.</p>
         </div>
-        <img src="1000016929.png" alt="Explore Bike coastal ride illustration" width="1024" height="1024" loading="lazy">
+        <p class="statement-signoff">GO YOUR <em>OWN WAY.</em><span aria-hidden="true">&#8599;</span></p>
       </div>
     </section>
+
+    <section id="journal" class="journal-section home-shell" aria-labelledby="journal-title">
+      <div class="journal-heading">
+        <div><p class="eyebrow">03 / JOURNAL</p><h2 id="journal-title">Outside the collection.</h2></div>
+        <p>A few things that catch our attention.<br>Stories to come.</p>
+      </div>
+      <div class="journal-grid">
+        <article class="journal-teaser journal-teaser--places">
+          <div class="journal-art journal-art--places" aria-hidden="true"><span>01</span></div>
+          <div class="journal-meta"><h3>Places</h3><span>Coming soon</span></div>
+          <p>A change of scenery.</p>
+        </article>
+        <article class="journal-teaser journal-teaser--music">
+          <div class="journal-art journal-art--music" aria-hidden="true"><span>02</span><div class="journal-record"></div></div>
+          <div class="journal-meta"><h3>Music</h3><span>Coming soon</span></div>
+          <p>Something to keep on repeat.</p>
+        </article>
+        <article class="journal-teaser journal-teaser--objects">
+          <div class="journal-art journal-art--objects" aria-hidden="true"><span>03</span><div class="journal-object"></div></div>
+          <div class="journal-meta"><h3>Design / Objects</h3><span>Coming soon</span></div>
+          <p>Everyday things, another way.</p>
+        </article>
+      </div>
+    </section>
+    <noscript><p>Enable JavaScript to save pieces in this browser. You can still browse every preview.</p></noscript>
   </main>
 
   <div class="toast" role="status" aria-live="polite" hidden></div>
   <footer class="site-footer">
-    <p>Explore Bike</p>
-    <div><a href="site-map.html">Site map</a><a href="order.html">Order draft</a></div>
+    <p><span data-brand-name>Explore</span></p>
+    <div role="navigation" aria-label="Footer navigation">
+      <a href="index.html#collection">Shop</a>
+      <a href="journal.html">Journal</a>
+      <a href="story.html">Story</a>
+      <a href="archive.html">Archive</a>
+      <a href="site-map.html">Site map</a>
+    </div>
     <p>&copy; 2026</p>
   </footer>
-  <script src="script.js"></script>
+  <script src="script.js?v=89db124c23"></script>
   <script src="shop.js"></script>
 </body>
 </html>
